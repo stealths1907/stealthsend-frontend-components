@@ -1,20 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    Button:
+    <StButton color="secondary">Dash</StButton>
+    <StButton>Settings</StButton>
+    Link:
+    <StLink>hoveraj me burki</StLink>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import StButton from "./components/StButton/StButton";
+import StLink from "./components/StLink/StLink";
 export default {
   name: "App",
   components: {
-    HelloWorld
+    StButton,
+    StLink
   }
 };
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

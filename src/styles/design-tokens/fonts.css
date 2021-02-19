@@ -1,0 +1,10 @@
+/* fonts  */
+
+:root {
+  --primary-font: 'Source Sans Pro', Sans-serif;
+}
+
+html,
+body {
+  font-family: var(--primary-font);
+}

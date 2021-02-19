@@ -1,0 +1,26 @@
+@import '../../design-tokens/colors.css';
+ .st-link {
+	 color: var(--marine700);
+	 font-size: 14px;
+	 letter-spacing: 0.16px;
+	 position: relative;
+	 line-height: 20px;
+	 text-decoration: none;
+	 transition: all 0.6s;
+}
+ .st-link:before {
+	 content: '';
+	 width: 0;
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 background: var(--marine700);
+	 transition: all 0.3s;
+	 height: 1px;
+}
+ .st-link:hover:before {
+	 width: 100%;
+	 left: 0;
+	 background: var(--marine700);
+}
+ 

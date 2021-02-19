@@ -1,0 +1,90 @@
+.st-input {
+    position: relative;
+    padding: 0;
+    border: none;
+    margin: 16px 0;
+    overflow: visible;
+    height: 30px;
+}
+.st-input:focus-within::after {
+    width: 100%;
+}
+.st-input:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    background-color: var(--marine500);
+    height: 2px;
+    border: none;
+    font-size: 1px;
+    transition: all 200ms ease-out;
+}
+.st-input.has-error label {
+    color: var(--danger) !important;
+}
+.st-input.has-error:after {
+    background-color: var(--danger) !important;
+}
+.st-input label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 -150%;
+    transition: transform 300ms ease;
+    pointer-events: none;
+    color: var(--text);
+    font-size: 14px;
+    letter-spacing: 0.16px;
+    line-height: 20px;
+    transition: all 0.25s ease-in-out;
+}
+.st-input input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 0 8px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    cursor: text;
+    position: relative;
+    background: transparent;
+    border-bottom: 2px solid var(--grey100);
+}
+.st-input input:hover {
+   /* color */
+    border-bottom: 2px solid var(--grey200);
+}
+.st-input input:focus::-webkit-input-placeholder {
+    opacity: 1;
+    color: var(--grey100);
+}
+.st-input input::-webkit-input-placeholder {
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+}
+.st-input input::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+}
+.st-input input:not(:-moz-placeholder-shown) + .st-input__label {
+    color: var(--text);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+.st-input input:focus ~ label, .st-input input.is-dirty ~ label {
+   /* transform: scale(0.6);
+    */
+    top: -20px;
+    position: absolute;
+    color: var(--marine500);
+    font-weight: 600;
+    letter-spacing: 0.16px;
+    line-height: 20px;
+    font-size: 12px;
+}

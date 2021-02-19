@@ -1,39 +1,41 @@
 @import '../../design-tokens/colors.css';
- .st-button {
-	 padding: 12px;
-	 font-family: 'Source Sans Pro';
-	 font-size: 18px;
-	 font-weight: 600;
-	 letter-spacing: 0.5px;
-	 line-height: 26px;
-	 text-align: center;
-	 min-width: 140px;
-	 outline: none;
+.st-button {
+  padding: 12px;
+  font-family: 'Source Sans Pro';
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  text-align: center;
+  min-width: 140px;
+  outline: none;
 }
- .st-button--primary {
-	/* border: 1px solid var(--marine600); */
-	border: 3px dashed red;
-	background-color: var(--marine500);
-	 background: linear-gradient(153.43deg, var(--marine500) 0%, var(--marine600) 100%);
-	 color: var(--white);
+.st-button--primary {
+  border: 1px solid var(--marine600);
+  background-color: var(--marine500);
+  background: linear-gradient(
+    153.43deg,
+    var(--marine500) 0%,
+    var(--marine600) 100%
+  );
+  color: var(--white);
 }
- .st-button--primary:hover {
-	 background-color: var(--marine400);
-	 cursor: pointer;
+.st-button--primary:hover {
+  background-color: var(--marine400);
+  cursor: pointer;
 }
- .st-button--secondary {
-	 border: none;
-	 background-color: transparent;
-	 color: var(--marine500);
+.st-button--secondary {
+  border: none;
+  background-color: transparent;
+  color: var(--marine500);
 }
- .st-button--secondary:hover {
-	 cursor: pointer;
-	 color: var(--marine400);
+.st-button--secondary:hover {
+  cursor: pointer;
+  color: var(--marine400);
 }
- .disabled {
-	 opacity: 0.5;
+.disabled {
+  opacity: 0.5;
 }
- .disabled:hover {
-	 cursor: not-allowed;
+.disabled:hover {
+  cursor: not-allowed;
 }
- 

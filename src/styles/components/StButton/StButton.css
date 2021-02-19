@@ -13,8 +13,9 @@
 	 outline: none;
 }
  .st-button--primary {
-	 border: 1px solid var(--marine600);
-	 background-color: var(--marine500);
+	/* border: 1px solid var(--marine600); */
+	border: 3px dashed red;
+	background-color: var(--marine500);
 	 background: linear-gradient(153.43deg, var(--marine500) 0%, var(--marine600) 100%);
 	 color: var(--white);
 }

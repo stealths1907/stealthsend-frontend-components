@@ -44,5 +44,5 @@ export default {
 </script>
 
 <style>
-@import "../../styles/components/StCheckbox/StCheckbox.css";
+@import "../styles/components/StCheckbox/StCheckbox.css";
 </style>

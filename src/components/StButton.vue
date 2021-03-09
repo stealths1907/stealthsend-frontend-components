@@ -24,6 +24,13 @@ export default {
         return false;
       }
     },
+    to: {
+      type: String,
+      required: false,
+      default: () => {
+        return "";
+      }
+    },
     color: {
       type: String,
       required: false,
@@ -38,7 +45,7 @@ export default {
   emits: ["click"],
   setup(props, ctx) {
     function handleClick() {
-      ctx.emit("click");
+      if (props.to.length > 0) ctx.emit("click");
     }
     return {
       handleClick
@@ -48,5 +55,5 @@ export default {
 </script>
 
 <style>
-@import "../../styles/components/StButton/StButton.css";
+@import "../styles/components/StButton/StButton.css";
 </style>

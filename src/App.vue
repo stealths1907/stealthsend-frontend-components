@@ -1,32 +1,179 @@
 <template>
-  <div>
-    Button:
-    <StButton color="secondary">Dash</StButton>
-    <StButton>Settings</StButton>
-    Link:
-    <StLink>hoveraj me burki</StLink>
+  <div class="uikit-container">
+    <h1>UI Kit</h1>
+    <h2>Buttons</h2>
+    <StButton color="secondary" @click="clickHandler('aaaaa')">Dash</StButton>
+    <StButton @click="clickHandler('bbbbbaaaaaaaaaaaaaaaa')">Settings</StButton>
+    <br />
+    <br />
+    <h2>Inputs</h2>
+    <StInput v-model="bla" placeholder="aaaa"></StInput>
+    <StInput
+      v-model="bla"
+      has-error
+      :error-messages="'custom error message'"
+    ></StInput>
+    <br />
+    <br />
+    <h2>Link</h2>
+    <StLink to="settings">hoveraj me burki</StLink>
+    <StLink to="settings">hoveraj me burki</StLink>
+    <br />
+    <br />
+    <StLink @click="clickHandler('bla')">ovaj samo ima emit</StLink>
+    <h2>Radio</h2>
+    <br />
+    <br />
+    <StRadio
+      :id="'uikitradio1'"
+      v-model="radioValue"
+      :name="'uikitradio'"
+      :label="'option 1'"
+      >option 1</StRadio
+    >
+    <StRadio
+      :id="'uikitradio2'"
+      v-model="radioValue"
+      :name="'uikitradio'"
+      :label="'option 2'"
+      >option 2</StRadio
+    >
+    <StRadio
+      :id="'uikitradio3'"
+      v-model="radioValue"
+      :name="'uikitradio'"
+      :label="'option 3'"
+      >option 3</StRadio
+    >
+    {{ radioValue }}
+    <br />
+    <br />
+    <h2>Checkbox</h2>
+
+    <StCheckbox v-model="checkboxPrvi"
+      >checkbox usrani {{ checkboxPrvi }}</StCheckbox
+    >
+    <StCheckbox
+      >checkbox usrani veliki Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Nemo iure doloremque accusantium, beatae doloribus
+      minima? Ut voluptas accusantium accusamus repellendus? Perferendis rerum
+      voluptates sequi incidunt, magnam quidem in. Magni, illum?Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Minus itaque eos consectetur
+      perferendis laborum facere expedita, iste quod voluptatibus officiis
+      dolorem delectus accusantium aut vero fugiat adipisci eaque perspiciatis
+      beatae!</StCheckbox
+    >
+    <br /><br />
+    <h2>Modal</h2>
+    <StModal :visible="showModal" @close="showModal = false">
+      <template #header> Modal title </template>
+      <template #body>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+        aspernatur? Necessitatibus hic a ullam commodi! Nostrum deserunt facere
+        ut ducimus unde in, animi qui soluta, omnis praesentium, incidunt
+        voluptatum quae.
+      </template>
+      <template #footer>
+        <StButton color="secondary" @click="showModal = false">Cancel</StButton>
+        <StButton @click="showModal = false">Submit</StButton>
+      </template>
+    </StModal>
+    <button @click="showModal = true">Show modal</button>
+    <br /><br />
+    <h2>Select</h2>
+    <StMultiselect
+      v-model="multiselectValue"
+      :can-deselect="false"
+      :options="multiselectOptions"
+    />
+    <br />
+    <br />
+    <h2>Table</h2>
+    <StTable :data="tableData" :columns="tableColumns"></StTable>
+    <StPagination
+      :total="Number(85)"
+      :page-size="Number(10)"
+      :current-page="Number(9)"
+    ></StPagination>
+    <br /><br />
+    <h2>Status</h2>
+    <StStatus type="red">Missed</StStatus>
+    <StStatus type="green">Produced</StStatus>
+    <StStatus type="orange">Late</StStatus>
+    <StStatus type="empty">Scheduled</StStatus>
+    <br /><br />
+    <h2>Dropdown</h2>
+    <StDropdown
+      :items="[
+        { to: 'settings', label: 'Settings' },
+        { to: 'dashboard', label: 'Dash' },
+      ]"
+      >click me</StDropdown
+    >
+    <br /><br />
+    <h2>Copy to clipboard</h2>
+    <StTooltip
+      :tooltip-text="copyPending ? 'Copied to clipboard!' : 'Click to copy'"
+    >
+      <StCopyToClipboard
+        content="kopirani string"
+        @click="handleCopy"
+      ></StCopyToClipboard>
+    </StTooltip>
+    <br />
+    <br />
+    <h2>Tooltip</h2>
+    <StTooltip position="left" tooltip-text="aaaaa">
+      <button>left</button>
+    </StTooltip>
+    <StTooltip tooltip-text="aaaaa">
+      <button>top</button>
+    </StTooltip>
+    <StTooltip position="bottom" tooltip-text="aaaaa">
+      <button>bottom</button>
+    </StTooltip>
+    <StTooltip position="right" tooltip-text="aaaaa">
+      <button>right</button>
+    </StTooltip>
+    <br />
+    <br />
+    <h2>Global loading</h2>
+    <button @click="toggleLoading">Trigger global loading</button>
+    <StLoading :visibility="isLoading"></StLoading>
   </div>
 </template>
 
+
 <script>
-import StButton from "./components/StButton/StButton";
-import StLink from "./components/StLink/StLink";
+import StButton from './components/StButton.vue'
+import StCheckbox from './components/StCheckbox.vue'
+// import StClipboard from './components/StClipboard.vue'
+import StDropdown from './components/StDropdown.vue'
+import StInput from './components/StInput.vue'
+import StLink from './components/StLink.vue'
+import StLoading from './components/StLoading.vue'
+import StModal from './components/StModal.vue'
+import StPagination from './components/StPagination.vue'
+import StRadio from './components/StRadio.vue'
+import StStatus from './components/StStatus.vue'
+import StTable from './components/StTable.vue'
+import StTooltip from './components/StTooltip.vue'
 export default {
   name: "App",
   components: {
     StButton,
-    StLink
+    StLink,
+    StCheckbox,
+    StRadio,
+    StInput,
+    StLoading,
+    StModal,
+    StPagination,
+    StStatus,
+    StTable,
+    StDropdown,
+    // StClipboard,
+    StTooltip
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

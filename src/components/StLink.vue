@@ -31,5 +31,5 @@ export default {
 </script>
 
 <style>
-@import "../../styles/components/StLink/StLink.css";
+@import "../styles/components/StLink/StLink.css";
 </style>

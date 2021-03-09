@@ -42,5 +42,5 @@ export default {
 </script>
 
 <style>
-@import "../../styles/components/StRadio/StRadio.css";
+@import "../styles/components/StRadio/StRadio.css";
 </style>

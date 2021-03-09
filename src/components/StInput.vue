@@ -81,5 +81,5 @@ export default {
 </script>
 
 <style>
-@import "../../styles/components/StInput/StInput.css";
+@import "../styles/components/StInput/StInput.css";
 </style>

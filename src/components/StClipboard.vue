@@ -7,7 +7,7 @@
 <script>
 import { useClipboard } from "@vueuse/core";
 export default {
-  name: "StCopyToClipboard",
+  name: "StClipboard",
   props: {
     content: {
       type: String,

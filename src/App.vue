@@ -115,10 +115,10 @@
     <StTooltip
       :tooltip-text="copyPending ? 'Copied to clipboard!' : 'Click to copy'"
     >
-      <StCopyToClipboard
+      <StClipboard
         content="kopirani string"
         @click="handleCopy"
-      ></StCopyToClipboard>
+      ></StClipboard>
     </StTooltip>
     <br />
     <br />
@@ -140,14 +140,16 @@
     <h2>Global loading</h2>
     <button @click="toggleLoading">Trigger global loading</button>
     <StLoading :visibility="isLoading"></StLoading>
+    <!-- <StCard class="list-item"></StCard> -->
   </div>
 </template>
 
 
 <script>
+import {ref} from 'vue'
 import StButton from './components/StButton.vue'
 import StCheckbox from './components/StCheckbox.vue'
-// import StClipboard from './components/StClipboard.vue'
+import StClipboard from './components/StClipboard.vue'
 import StDropdown from './components/StDropdown.vue'
 import StInput from './components/StInput.vue'
 import StLink from './components/StLink.vue'
@@ -158,6 +160,7 @@ import StRadio from './components/StRadio.vue'
 import StStatus from './components/StStatus.vue'
 import StTable from './components/StTable.vue'
 import StTooltip from './components/StTooltip.vue'
+// import StCard from './components/StCard.vue'
 export default {
   name: "App",
   components: {
@@ -172,8 +175,77 @@ export default {
     StStatus,
     StTable,
     StDropdown,
-    // StClipboard,
-    StTooltip
+    StClipboard,
+    StTooltip,
+    // StCard
+  },
+  setup(){
+    const tableData = ref([
+      {
+        address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '12345678',
+      },
+      {
+        address: '4b5t45z45zb45zb45bz45bz45zb45zb454',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '556756756',
+      },
+      {
+        address: '56un56un56u56un56un56u5u56n56un56u',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '7878787887',
+      },
+      {
+        address: '67imi67im67im67im67i67i67i6767m6mm',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '6776676767',
+      },
+      {
+        address: 'rbrthrthrhrthrhthbrbhrthbrbthrtbhr ',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '454353353535',
+      },
+      {
+        address: 'vbbcvbcvbcvbcvbcbcvbvbcvbcvbcvbcvb',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '67677667',
+      },
+      {
+        address: 'mbnnmbmnbmbnmbnmbnmbnmbmbnmbnmbnmm',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '7676767',
+      },
+      {
+        address: 'qweqeqweqqwewqewqeqeqewqweqwewqqwe',
+        protocol: 62200,
+        subVersion: '2.2.0',
+        blockHeight: '12345678',
+      },
+    ])
+    const tableColumns = ref([
+      { key: 'address', title: 'Address' },
+      { key: 'protocol', title: 'Protocol' },
+      {
+        key: 'subVersion',
+        title: 'Sub-version',
+        customCellClass: 'cell-center',
+        customHeaderClass: 'cell-center',
+      },
+      { key: 'blockHeight', title: 'Blockheight' },
+    ])
+
+    return {
+      tableData,
+      tableColumns
+    }
   }
 };
 </script>

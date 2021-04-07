@@ -46,7 +46,7 @@ Deploys for desktop apps are still in research state and this is yet to be docum
 
 - use GitFlow because it is suitable for handling multiple versions of the same project
 - reference Jira task in the commit message (e.g. "XSTDESKTOP-123 implement login")
-- when new version of kit is updated, go inside stealth-desktop-app project, find "package.json" file and update stealth-kit version, then open terminal and run command "npm run clean"
+- when something on kit is updated go inside "package.json" file and update stealth-kit version so other projects which are using it would know that new version is available
 
 ### Links
 

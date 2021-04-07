@@ -23,7 +23,7 @@
         >...</span
       > -->
       <span class="page">{{ Math.ceil(total / pageSize) }}</span>
-      <!-- always show last page -->
+      <!-- always shows last page -->
       <span
         class="next page"
         :class="{ disabled: pageCount === currentPage }"

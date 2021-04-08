@@ -241,10 +241,14 @@ export default {
       },
       { key: 'blockHeight', title: 'Blockheight' },
     ])
-
     return {
       tableData,
-      tableColumns
+      tableColumns,
+    }
+  },
+  methods: {
+    clickHandler(data){
+      console.log(data);
     }
   }
 };

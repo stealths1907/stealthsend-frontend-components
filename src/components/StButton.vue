@@ -7,7 +7,7 @@
       disabled: disabled
     }"
     :disabled="disabled"
-    @click="handleClick"
+    @click="(e) => $emit('click', e)"
   >
     <slot />
   </button>
@@ -43,14 +43,14 @@ export default {
     }
   },
   emits: ["click"],
-  setup(props, ctx) {
-    function handleClick() {
-      if (props.to.length > 0) ctx.emit("click");
-    }
-    return {
-      handleClick
-    };
-  }
+  // setup(props, ctx) {
+  //   function handleClick() {
+  //     if (props.to.length > 0) ctx.emit("click");
+  //   }
+  //   return {
+  //     handleClick
+  //   };
+  // }
 };
 </script>
 

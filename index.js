@@ -1,4 +1,5 @@
 import StButton from './src/components/StButton.vue'
+import StCard from './src/components/StCard.vue'
 import StCheckbox from './src/components/StCheckbox.vue'
 import StClipboard from './src/components/StClipboard.vue'
 import StDropdown from './src/components/StDropdown.vue'
@@ -24,6 +25,7 @@ export {
     StTable,
     StDropdown,
     StClipboard,
-    StTooltip
+    StTooltip,
+    StCard
 }
 

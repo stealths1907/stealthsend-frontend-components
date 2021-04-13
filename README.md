@@ -1,7 +1,6 @@
 # Stealth UI Kit
 
 Stealth desktop App for MacOs, Linux and Windows.
-
 - Jira board: https://jira.barrage.net/projects/XSTDESKTOP
 - Slack channel: https://wearebarrage.slack.com/archives/G01KQNE67PV
 

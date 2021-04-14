@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { onMounted, watch, ref, computed } from "vue";
+import { onMounted, watchEffect, ref, computed } from "vue";
 export default {
   name: "StPagination",
   props: {
@@ -78,7 +78,7 @@ export default {
         : Math.floor(l / s) + 1;
     });
 
-    watch(props.pageSize, pageSize => {
+    watchEffect(props.pageSize, pageSize => {
       sizeChange(pageSize);
     });
 
@@ -95,13 +95,10 @@ export default {
       paginationChange(page);
     }
     function nextPage() {
-      console.log("next page");
       if (props.pageCount <= props.currentPage) return;
       paginationChange(props.currentPage + 1);
     }
     function prevPage() {
-      console.log("prev page");
-
       if (props.currentPage <= 1) return;
       paginationChange(props.currentPage - 1);
     }

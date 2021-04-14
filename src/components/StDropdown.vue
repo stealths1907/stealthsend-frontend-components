@@ -63,9 +63,7 @@ export default {
   position: absolute;
   min-width: 300px;
   background: white;
-  /*Set z-index Variable for Dropdown*/
-  /* z-index: var(--zDropdown); */
-  z-index: 99;
+  z-index: var(--zDropdown);
   left: 120px;
 }
 .st-dropdown__items .tip {

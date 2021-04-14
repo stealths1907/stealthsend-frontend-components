@@ -5,6 +5,7 @@
 @import 'styles/design-tokens/colors.css';
 @import 'styles/design-tokens/fonts.css';
 @import 'styles/design-tokens/typography.css';
+@import 'styles/design-tokens/zindex.css';
 
 @import 'styles/tools/transitions.css';
 

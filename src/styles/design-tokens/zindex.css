@@ -1,0 +1,8 @@
+:root {
+  --zApp: 1;
+  --zDropdown: 2;
+  --zModal: 3;
+  --zTooltip: 4;
+  --zGlobalLoading: 5;
+  --zAside: 6;
+}

@@ -140,7 +140,6 @@
     <h2>Global loading</h2>
     <button @click="toggleLoading">Trigger global loading</button>
     <StLoading :visibility="isLoading"></StLoading>
-    <!-- <StCard class="list-item"></StCard> -->
   </div>
 </template>
 
@@ -160,7 +159,6 @@ import StRadio from './components/StRadio.vue'
 import StStatus from './components/StStatus.vue'
 import StTable from './components/StTable.vue'
 import StTooltip from './components/StTooltip.vue'
-// import StCard from './components/StCard.vue'
 export default {
   name: "App",
   components: {
@@ -176,8 +174,7 @@ export default {
     StTable,
     StDropdown,
     StClipboard,
-    StTooltip,
-    // StCard
+    StTooltip
   },
   setup(){
     const tableData = ref([

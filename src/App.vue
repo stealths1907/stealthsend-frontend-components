@@ -1,6 +1,8 @@
 <template>
   <div class="uikit-container">
     <h1>UI Kit</h1>
+    <h2>Tag</h2>
+    <StTag>+280.39%</StTag>
     <h2>Buttons</h2>
     <StButton color="secondary" @click="clickHandler('aaaaa')">Dash</StButton>
     <StButton @click="clickHandler('bbbbbaaaaaaaaaaaaaaaa')">Settings</StButton>
@@ -159,6 +161,7 @@ import StRadio from './components/StRadio.vue'
 import StStatus from './components/StStatus.vue'
 import StTable from './components/StTable.vue'
 import StTooltip from './components/StTooltip.vue'
+import StTag from './components/StTag.vue'
 export default {
   name: "App",
   components: {
@@ -174,7 +177,8 @@ export default {
     StTable,
     StDropdown,
     StClipboard,
-    StTooltip
+    StTooltip,
+    StTag
   },
   setup(){
     const tableData = ref([

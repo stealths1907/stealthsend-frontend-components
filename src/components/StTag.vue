@@ -15,7 +15,7 @@ export default {
         return 'success'
       },
       validator: (value) => {
-        ['success'].includes(value)
+        return ['success'].includes(value)
       }
     }
   },

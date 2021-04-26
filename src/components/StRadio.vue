@@ -18,7 +18,7 @@
 <script>
 // import { ref } from 'vue'
 export default {
-  name: "StRadio",
+  name: 'StRadio',
   props: {
     id: {
       type: String,
@@ -37,10 +37,10 @@ export default {
       required: true
     }
   },
-  emits: ["update:modelValue"]
-};
+  emits: ['update:modelValue']
+}
 </script>
 
 <style>
-@import "../styles/components/StRadio/StRadio.css";
+@import '../styles/components/StRadio/StRadio.css';
 </style>

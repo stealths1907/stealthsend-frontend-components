@@ -48,12 +48,12 @@
 
 <script>
 export default {
-  name: "StTable",
+  name: 'StTable',
   props: {
     identifier: {
       type: String,
       required: false,
-      default: ""
+      default: ''
     },
     columns: {
       type: Array,
@@ -64,16 +64,16 @@ export default {
       required: true
     }
   },
-  emits: ["sortChanged", "rowClick"],
+  emits: ['sortChanged', 'rowClick'],
   methods: {
     handleSort(col) {
-      this.$emit("sortChanged", col);
+      this.$emit('sortChanged', col)
     },
     handleRowClick(row) {
-      this.$emit("rowClick", row);
-    },
+      this.$emit('rowClick', row)
+    }
   }
-};
+}
 </script>
 
 <style scoped>

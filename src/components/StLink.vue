@@ -14,22 +14,22 @@ export default {
       type: String,
       required: false,
       default: () => {
-        return null;
+        return null
       }
     }
   },
-  emits: ["click"],
+  emits: ['click'],
   setup(props, ctx) {
     function handleClick() {
-      ctx.emit("click");
+      ctx.emit('click')
     }
     return {
       handleClick
-    };
+    }
   }
-};
+}
 </script>
 
 <style>
-@import "../styles/components/StLink/StLink.css";
+@import '../styles/components/StLink/StLink.css';
 </style>

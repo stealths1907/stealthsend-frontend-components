@@ -1,13 +1,17 @@
 <template>
-  <div v-show="visibility" class="loading-page" :class="{opaque: opaque, transparent: !opaque}">
+  <div
+    v-show="visibility"
+    class="loading-page"
+    :class="{ opaque: opaque, transparent: !opaque }"
+  >
     <img src="../../static/xstloader.gif" alt="Test gif" />
   </div>
 </template>
 
 <script>
-import { watchEffect } from "vue";
+import { watchEffect } from 'vue'
 export default {
-  name: "StLoader",
+  name: 'StLoader',
   props: {
     visibility: {
       type: Boolean,
@@ -23,10 +27,10 @@ export default {
   setup(props) {
     watchEffect(props.visibility, () => {
       // when global loading is active, it shouldn't be possible to scroll
-      document.body.classList.toggle("noscroll", props.visibility);
-    });
+      document.body.classList.toggle('noscroll', props.visibility)
+    })
   }
-};
+}
 </script>
 
 <style lang="postcss">

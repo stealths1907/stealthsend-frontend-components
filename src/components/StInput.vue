@@ -17,69 +17,69 @@
 
 <script>
 export default {
-  name: "StInput",
+  name: 'StInput',
   props: {
     icon: {
       type: String,
       required: false,
       default: () => {
-        return "";
+        return ''
       }
     },
     modelValue: {
       type: String,
       required: false,
       default: () => {
-        return "";
+        return ''
       }
     },
     disabled: {
       type: Boolean,
       required: false,
       default: () => {
-        return false;
+        return false
       }
     },
     type: {
       type: String,
       required: false,
       default: () => {
-        return "text";
+        return 'text'
       }
     },
     placeholder: {
       type: String,
       required: false,
       default: () => {
-        return "";
+        return ''
       }
     },
     hasError: {
       type: Boolean,
       required: false,
       default: () => {
-        return false;
+        return false
       }
     },
     errorMessages: {
       type: String,
       required: false,
       default: () => {
-        return null;
+        return null
       }
     },
     label: {
       type: String,
       required: false,
       default: () => {
-        return "No label";
+        return 'No label'
       }
     }
   },
-  emits: ["update:modelValue"]
-};
+  emits: ['update:modelValue']
+}
 </script>
 
 <style>
-@import "../styles/components/StInput/StInput.css";
+@import '../styles/components/StInput/StInput.css';
 </style>

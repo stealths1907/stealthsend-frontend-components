@@ -15,34 +15,34 @@
 
 <script>
 export default {
-  name: "StButton",
+  name: 'StButton',
   props: {
     disabled: {
       type: Boolean,
       required: false,
       default: () => {
-        return false;
+        return false
       }
     },
     to: {
       type: String,
       required: false,
       default: () => {
-        return "";
+        return ''
       }
     },
     color: {
       type: String,
       required: false,
       default: () => {
-        return "primary";
+        return 'primary'
       },
-      validator: value => {
-        return ["primary", "secondary"].includes(value);
+      validator: (value) => {
+        return ['primary', 'secondary'].includes(value)
       }
     }
   },
-  emits: ["click"],
+  emits: ['click']
   // setup(props, ctx) {
   //   function handleClick() {
   //     if (props.to.length > 0) ctx.emit("click");
@@ -51,9 +51,9 @@ export default {
   //     handleClick
   //   };
   // }
-};
+}
 </script>
 
 <style>
-@import "../styles/components/StButton/StButton.css";
+@import '../styles/components/StButton/StButton.css';
 </style>

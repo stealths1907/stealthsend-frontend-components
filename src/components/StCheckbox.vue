@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "StCheckbox",
+  name: 'StCheckbox',
   props: {
     modelValue: {
       type: [String, Boolean],
@@ -29,20 +29,20 @@ export default {
       default: false
     }
   },
-  emits: ["update:modelValue"],
+  emits: ['update:modelValue'],
   setup(props, ctx) {
     function handleInput(event) {
-      let isChecked = event.target.checked;
-      ctx.emit("update:modelValue", isChecked);
+      let isChecked = event.target.checked
+      ctx.emit('update:modelValue', isChecked)
     }
 
     return {
       handleInput
-    };
+    }
   }
-};
+}
 </script>
 
 <style>
-@import "../styles/components/StCheckbox/StCheckbox.css";
+@import '../styles/components/StCheckbox/StCheckbox.css';
 </style>

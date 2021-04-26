@@ -5,25 +5,25 @@
 </template>
 
 <script>
-import { useClipboard } from "@vueuse/core";
+import { useClipboard } from '@vueuse/core'
 export default {
-  name: "StClipboard",
+  name: 'StClipboard',
   props: {
     content: {
       type: String,
       required: true
     }
   },
-  emits: ["click"],
+  emits: ['click'],
   setup(props, ctx) {
-    const { copy } = useClipboard();
+    const { copy } = useClipboard()
     function copyToClipboard() {
-      copy(props.content);
-      ctx.emit("click");
+      copy(props.content)
+      ctx.emit('click')
     }
-    return { copyToClipboard };
+    return { copyToClipboard }
   }
-};
+}
 </script>
 
 <style lang="postcss" scoped>

@@ -108,7 +108,7 @@
     <StDropdown
       :items="[
         { to: 'settings', label: 'Settings' },
-        { to: 'dashboard', label: 'Dash' },
+        { to: 'dashboard', label: 'Dash' }
       ]"
       >click me</StDropdown
     >
@@ -117,10 +117,7 @@
     <StTooltip
       :tooltip-text="copyPending ? 'Copied to clipboard!' : 'Click to copy'"
     >
-      <StClipboard
-        content="kopirani string"
-        @click="handleCopy"
-      ></StClipboard>
+      <StClipboard content="kopirani string" @click="handleCopy"></StClipboard>
     </StTooltip>
     <br />
     <br />
@@ -145,9 +142,8 @@
   </div>
 </template>
 
-
 <script>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import StButton from './components/StButton.vue'
 import StCheckbox from './components/StCheckbox.vue'
 import StClipboard from './components/StClipboard.vue'
@@ -163,7 +159,7 @@ import StTable from './components/StTable.vue'
 import StTooltip from './components/StTooltip.vue'
 import StTag from './components/StTag.vue'
 export default {
-  name: "App",
+  name: 'App',
   components: {
     StButton,
     StLink,
@@ -180,56 +176,56 @@ export default {
     StTooltip,
     StTag
   },
-  setup(){
+  setup() {
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '12345678',
+        blockHeight: '12345678'
       },
       {
         address: '4b5t45z45zb45zb45bz45bz45zb45zb454',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '556756756',
+        blockHeight: '556756756'
       },
       {
         address: '56un56un56u56un56un56u5u56n56un56u',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '7878787887',
+        blockHeight: '7878787887'
       },
       {
         address: '67imi67im67im67im67i67i67i6767m6mm',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '6776676767',
+        blockHeight: '6776676767'
       },
       {
         address: 'rbrthrthrhrthrhthbrbhrthbrbthrtbhr ',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '454353353535',
+        blockHeight: '454353353535'
       },
       {
         address: 'vbbcvbcvbcvbcvbcbcvbvbcvbcvbcvbcvb',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '67677667',
+        blockHeight: '67677667'
       },
       {
         address: 'mbnnmbmnbmbnmbnmbnmbnmbmbnmbnmbnmm',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '7676767',
+        blockHeight: '7676767'
       },
       {
         address: 'qweqeqweqqwewqewqeqeqewqweqwewqqwe',
         protocol: 62200,
         subVersion: '2.2.0',
-        blockHeight: '12345678',
-      },
+        blockHeight: '12345678'
+      }
     ])
     const tableColumns = ref([
       { key: 'address', title: 'Address' },
@@ -238,19 +234,19 @@ export default {
         key: 'subVersion',
         title: 'Sub-version',
         customCellClass: 'cell-center',
-        customHeaderClass: 'cell-center',
+        customHeaderClass: 'cell-center'
       },
-      { key: 'blockHeight', title: 'Blockheight' },
+      { key: 'blockHeight', title: 'Blockheight' }
     ])
     return {
       tableData,
-      tableColumns,
+      tableColumns
     }
   },
   methods: {
-    clickHandler(data){
-      console.log(data);
+    clickHandler(data) {
+      console.log(data)
     }
   }
-};
+}
 </script>

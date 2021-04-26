@@ -1,7 +1,7 @@
 <template>
   <div>
     <table class="table">
-      <thead>
+      <thead v-if="hasHeader">
         <tr>
           <th
             v-for="{ key, title, isSortable, customHeaderClass } in columns"
@@ -62,6 +62,13 @@ export default {
     data: {
       type: Array,
       required: true
+    },
+    hasHeader: {
+      type: Boolean,
+      required: false,
+      default: () => {
+        return true
+      }
     }
   },
   emits: ['sortChanged', 'rowClick'],
@@ -109,6 +116,11 @@ export default {
   border-left: 4px solid transparent;
   transition: 0.22s;
 }
+
+  .table .table__row td {
+    border-bottom: 1px solid var(--grey100);
+  }
+
 .table .table__row:hover {
   background-color: var(--background50);
   border-color: var(--marine500);

@@ -117,9 +117,9 @@ export default {
   transition: 0.22s;
 }
 
-  .table .table__row td {
-    border-bottom: 1px solid var(--grey100);
-  }
+.table .table__row td {
+  border-bottom: 1px solid var(--grey100);
+}
 
 .table .table__row:hover {
   background-color: var(--background50);

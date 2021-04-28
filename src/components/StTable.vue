@@ -91,6 +91,7 @@ export default {
 }
 .table td {
   padding: 18px 6px;
+  vertical-align: middle;
 }
 .table thead {
   border-bottom: 1px solid var(--grey100);

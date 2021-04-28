@@ -90,7 +90,7 @@ export default {
   /* custom classes for th and td cells */
 }
 .table td {
-  padding: 18px 24px;
+  padding: 18px 0;
 }
 .table thead {
   border-bottom: 1px solid var(--grey100);
@@ -103,7 +103,7 @@ export default {
   font-weight: 600;
   letter-spacing: 0.23px;
   line-height: 20px;
-  padding: 12px 24px;
+  padding: 18px 0;
 }
 .table .table__row {
   font-size: 14px;

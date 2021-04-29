@@ -2,6 +2,7 @@ import StButton from './src/components/StButton.vue'
 import StCheckbox from './src/components/StCheckbox.vue'
 import StClipboard from './src/components/StClipboard.vue'
 import StDropdown from './src/components/StDropdown.vue'
+import StIcon from './src/components/StIcon.vue'
 import StInput from './src/components/StInput.vue'
 import StLink from './src/components/StLink.vue'
 import StLoading from './src/components/StLoading.vue'
@@ -26,6 +27,7 @@ export {
     StDropdown,
     StClipboard,
     StTooltip,
-    StTag
+    StTag,
+    StIcon
 }
 

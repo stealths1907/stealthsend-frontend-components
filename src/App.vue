@@ -1,6 +1,8 @@
 <template>
   <div class="uikit-container">
     <h1>UI Kit</h1>
+    <h2>ICONS</h2>
+    <StIcon name="chart"></StIcon>
     <h2>Tag</h2>
     <StTag>+280.39%</StTag>
     <h2>Buttons</h2>
@@ -158,10 +160,13 @@ import StStatus from './components/StStatus.vue'
 import StTable from './components/StTable.vue'
 import StTooltip from './components/StTooltip.vue'
 import StTag from './components/StTag.vue'
+import StIcon from './components/StIcon.vue'
+
 export default {
   name: 'App',
   components: {
     StButton,
+    StIcon,
     StLink,
     StCheckbox,
     StRadio,

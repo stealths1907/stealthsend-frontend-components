@@ -110,7 +110,7 @@ export default {
 }
 .st-modal__header {
   color: var(--grey1000);
-  font-family: 'Source Sans Pro';
+  font-family: var(--primary-font);
   font-size: 20px;
   letter-spacing: 0.32px;
   line-height: 26px;
@@ -135,7 +135,7 @@ export default {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--primary-font);
 }
 .modal-default-button {
   display: block;

@@ -29,7 +29,7 @@ export default {
 .st-tag {
   background: var(--mint200);
   border-radius: 2px;
-  font-family: Noto Sans;
+  font-family: var(--secondary-font);
   font-style: normal;
   font-weight: bold;
   font-size: 12px;

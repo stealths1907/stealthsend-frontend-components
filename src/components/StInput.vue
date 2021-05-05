@@ -1,5 +1,12 @@
 <template>
-  <fieldset class="st-input" :class="{ 'has-error': hasError, 'st-input--is-dark' : color === 'dark', 'st-input--is-not-empty' : modelValue.length > 0 }">
+  <fieldset
+    class="st-input"
+    :class="{
+      'has-error': hasError,
+      'st-input--is-dark': color === 'dark',
+      'st-input--is-not-empty': modelValue.length > 0
+    }"
+  >
     <input
       ref="input"
       :type="type"
@@ -16,11 +23,12 @@
 </template>
 
 <script>
-import {ref} from 'vue';
+import { ref } from 'vue'
 export default {
-  name: 'StInput',  props: {
+  name: 'StInput',
+  props: {
     color: {
-            type: String,
+      type: String,
       required: false,
       default: () => {
         return 'default'
@@ -87,10 +95,10 @@ export default {
     }
   },
   emits: ['update:modelValue'],
-  setup(props, {emit}) {
-    let innerValue = ref('');
+  setup(props, { emit }) {
+    let innerValue = ref('')
     function inputChange(value) {
-      innerValue.value = value;
+      innerValue.value = value
       emit('update:modelValue', value)
     }
 
@@ -98,8 +106,7 @@ export default {
       inputChange,
       innerValue
     }
-  },
-
+  }
 }
 </script>
 

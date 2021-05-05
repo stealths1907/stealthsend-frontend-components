@@ -77,7 +77,7 @@
     >
       <template #header> Modal title </template>
       <template #body>
-        <StInput v-model="accountModal" color="dark" label="Account" ></StInput>
+        <StInput v-model="accountModal" color="dark" label="Account"></StInput>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
         aspernatur? Necessitatibus hic a ullam commodi! Nostrum deserunt facere
         ut ducimus unde in, animi qui soluta, omnis praesentium, incidunt

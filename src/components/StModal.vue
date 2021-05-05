@@ -7,8 +7,21 @@
             v-if="showCloseButton"
             class="st-modal__close-button"
             @click="$emit('close')"
+          >
+            <svg
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1l12 12M3 13L15 1" stroke="#FAF9FC" stroke-width="2" stroke-linejoin="round"/></svg>
+              <path
+                d="M3 1l12 12M3 13L15 1"
+                stroke="#FAF9FC"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+            </svg>
           </span>
           <div class="st-modal__header">
             <slot name="header"> default header </slot>
@@ -93,10 +106,10 @@ export default {
 .st-modal__header {
   color: var(--grey50);
   font-family: var(--primary-font);
-font-weight: 700;
-font-size: 18px;
-line-height: 28px;
-letter-spacing: 0.32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.32px;
 }
 .st-modal__body {
   margin: 45px 0 65px 0;
@@ -117,7 +130,8 @@ letter-spacing: 0.32px;
   background-color: var(--marine900);
   color: var(--grey100);
   border-radius: 2px;
-  box-shadow: 4px 4px 8px rgba(20, 4, 53, 0.05), 15px 15px 30px rgba(20, 4, 53, 0.15);
+  box-shadow: 4px 4px 8px rgba(20, 4, 53, 0.05),
+    15px 15px 30px rgba(20, 4, 53, 0.15);
   transition: all 0.3s ease;
   font-family: var(--primary-font);
 }

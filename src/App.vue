@@ -79,7 +79,7 @@
       </template>
       <template #footer>
         <StButton color="secondary" @click="showModal = false">Cancel</StButton>
-        <StButton @click="showModal = false">Submit</StButton>
+        <StButton color="white"  @click="showModal = false">Submit</StButton>
       </template>
     </StModal>
     <button @click="showModal = true">Show modal</button>

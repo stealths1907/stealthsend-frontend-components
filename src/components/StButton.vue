@@ -4,6 +4,7 @@
     :class="{
       'st-button--primary': color === 'primary',
       'st-button--secondary': color === 'secondary',
+      'st-button--white': color === 'white',
       disabled: disabled
     }"
     :disabled="disabled"
@@ -38,7 +39,7 @@ export default {
         return 'primary'
       },
       validator: (value) => {
-        return ['primary', 'secondary'].includes(value)
+        return ['primary', 'secondary', 'white'].includes(value)
       }
     }
   },

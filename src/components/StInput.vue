@@ -1,5 +1,5 @@
 <template>
-  <fieldset class="st-input" :class="{ 'has-error': hasError }">
+  <fieldset class="st-input" :class="{ 'has-error': hasError, 'st-input--is-dark' : color === 'dark', 'st-input--is-not-empty' : modelValue.length > 0 }">
     <input
       ref="input"
       :type="type"
@@ -9,16 +9,26 @@
       class="st-input__inner"
       :class="{ 'is-disabled': disabled, 'is-dirty': modelValue.length > 0 }"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="inputChange($event.target.value)"
     />
     <label>{{ hasError ? errorMessages : label }}</label>
   </fieldset>
 </template>
 
 <script>
+import {ref} from 'vue';
 export default {
-  name: 'StInput',
-  props: {
+  name: 'StInput',  props: {
+    color: {
+            type: String,
+      required: false,
+      default: () => {
+        return 'default'
+      },
+      validator: (value) => {
+        return ['default', 'dark'].includes(value)
+      }
+    },
     icon: {
       type: String,
       required: false,
@@ -76,7 +86,20 @@ export default {
       }
     }
   },
-  emits: ['update:modelValue']
+  emits: ['update:modelValue'],
+  setup(props, {emit}) {
+    let innerValue = ref('');
+    function inputChange(value) {
+      innerValue.value = value;
+      emit('update:modelValue', value)
+    }
+
+    return {
+      inputChange,
+      innerValue
+    }
+  },
+
 }
 </script>
 

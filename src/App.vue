@@ -77,6 +77,7 @@
     >
       <template #header> Modal title </template>
       <template #body>
+        <StInput v-model="accountModal" color="dark" label="Account" ></StInput>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
         aspernatur? Necessitatibus hic a ullam commodi! Nostrum deserunt facere
         ut ducimus unde in, animi qui soluta, omnis praesentium, incidunt
@@ -188,6 +189,7 @@ export default {
   },
   setup() {
     const showModal = ref(false)
+    const accountModal = ref('test dummy')
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
@@ -252,7 +254,8 @@ export default {
     return {
       tableData,
       tableColumns,
-      showModal
+      showModal,
+      accountModal
     }
   },
   methods: {

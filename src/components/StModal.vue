@@ -136,10 +136,10 @@ export default {
 .st-modal__body {
   margin: 45px 0 65px 0;
 }
-.st-modal__footer {
+/* .st-modal__footer {
   display: flex;
   justify-content: flex-end;
-}
+} */
 .st-modal__stepper {
   display: flex;
   justify-content: center;

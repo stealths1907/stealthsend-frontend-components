@@ -39,8 +39,13 @@
               </button> -->
             </slot>
           </div>
-          <div  v-if="steps > 0" class="st-modal__stepper">
-            <span v-for="step in steps" :key="step" class="step" :class="{'step--active': step === currentStep}"></span>
+          <div v-if="steps > 0" class="st-modal__stepper">
+            <span
+              v-for="step in steps"
+              :key="step"
+              class="step"
+              :class="{ 'step--active': step === currentStep }"
+            ></span>
           </div>
         </div>
       </div>
@@ -141,7 +146,7 @@ export default {
   align-items: center;
   margin-top: 24px;
 }
-.st-modal__stepper .step{
+.st-modal__stepper .step {
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -149,7 +154,7 @@ export default {
   margin: 0 4px;
 }
 
-.st-modal__stepper .step--active{
+.st-modal__stepper .step--active {
   width: 4px;
   height: 4px;
   border-radius: 50%;

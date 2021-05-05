@@ -69,7 +69,12 @@
     >
     <br /><br />
     <h2>Modal</h2>
-    <StModal :steps="3" :current-step="1" :visible="showModal" @close="showModal = false">
+    <StModal
+      :steps="3"
+      :current-step="1"
+      :visible="showModal"
+      @close="showModal = false"
+    >
       <template #header> Modal title </template>
       <template #body>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,

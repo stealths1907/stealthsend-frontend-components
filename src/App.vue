@@ -69,7 +69,7 @@
     >
     <br /><br />
     <h2>Modal</h2>
-    <StModal :visible="showModal" @close="showModal = false">
+    <StModal :steps="3" :current-step="1" :visible="showModal" @close="showModal = false">
       <template #header> Modal title </template>
       <template #body>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
@@ -79,7 +79,7 @@
       </template>
       <template #footer>
         <StButton color="secondary" @click="showModal = false">Cancel</StButton>
-        <StButton color="white"  @click="showModal = false">Submit</StButton>
+        <StButton color="white" @click="showModal = false">Submit</StButton>
       </template>
     </StModal>
     <button @click="showModal = true">Show modal</button>

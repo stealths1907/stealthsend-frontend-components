@@ -39,6 +39,9 @@
               </button> -->
             </slot>
           </div>
+          <div  v-if="steps > 0" class="st-modal__stepper">
+            <span v-for="step in steps" :key="step" class="step" :class="{'step--active': step === currentStep}"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -52,6 +55,20 @@ import { ref } from 'vue'
 export default {
   name: 'StModal',
   props: {
+    steps: {
+      type: Number,
+      required: false,
+      default: () => {
+        return 0
+      }
+    },
+    currentStep: {
+      type: Number,
+      required: false,
+      default: () => {
+        return 0
+      }
+    },
     visible: {
       type: Boolean,
       required: false,
@@ -118,6 +135,28 @@ export default {
   display: flex;
   justify-content: flex-end;
 }
+.st-modal__stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+.st-modal__stepper .step{
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--grey400);
+  margin: 0 4px;
+}
+
+.st-modal__stepper .step--active{
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--grey50);
+  margin: 0 4px;
+}
+
 .st-modal-wrapper {
   display: table-cell;
   vertical-align: middle;

@@ -182,6 +182,7 @@ export default {
     StTag
   },
   setup() {
+    const showModal = ref(false)
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
@@ -245,7 +246,8 @@ export default {
     ])
     return {
       tableData,
-      tableColumns
+      tableColumns,
+      showModal
     }
   },
   methods: {

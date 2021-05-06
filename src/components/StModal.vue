@@ -3,6 +3,13 @@
     <div v-if="visible" class="st-modal">
       <div class="st-modal-wrapper">
         <div ref="stModalRef" class="st-modal-container">
+
+          <div class="st-modal__header">
+            <slot name="header"> default header </slot>
+                      <div class="controls">
+          <span v-if="showBackButton" class="st-modal__back-button" @click="$emit('back')" >
+            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h17M8 13L2 7l6-6" stroke="#FAF9FC" stroke-width="2"/></svg>
+          </span>
           <span
             v-if="showCloseButton"
             class="st-modal__close-button"
@@ -23,8 +30,7 @@
               />
             </svg>
           </span>
-          <div class="st-modal__header">
-            <slot name="header"> default header </slot>
+          </div>
           </div>
 
           <div class="st-modal__body">
@@ -60,6 +66,13 @@ import { ref } from 'vue'
 export default {
   name: 'StModal',
   props: {
+    showBackButton: {
+      type: Boolean,
+      required: false,
+      default: () => {
+        return false
+      }
+    },
     steps: {
       type: Number,
       required: false,
@@ -90,7 +103,7 @@ export default {
       default: true
     }
   },
-  emits: ['close'],
+  emits: ['close', 'back'],
   setup(props, ctx) {
     const stModalRef = ref(null)
 
@@ -118,9 +131,11 @@ export default {
   transition: opacity 0.3s ease;
 }
 .st-modal__close-button {
-  position: absolute;
-  top: 32px;
-  right: 32px;
+  cursor: pointer;
+}
+.st-modal__back-button {
+  cursor: pointer;
+  margin-right: 26px;
 }
 .st-modal__close-button:hover {
   cursor: pointer;
@@ -132,6 +147,10 @@ export default {
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .st-modal__body {
   margin: 45px 0 65px 0;
@@ -182,5 +201,10 @@ export default {
 .modal-default-button {
   display: block;
   margin-top: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>

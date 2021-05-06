@@ -70,6 +70,7 @@
     <br /><br />
     <h2>Modal</h2>
     <StModal
+      show-back-button
       :steps="3"
       :current-step="1"
       :visible="showModal"

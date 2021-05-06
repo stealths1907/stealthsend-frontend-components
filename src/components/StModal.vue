@@ -3,34 +3,49 @@
     <div v-if="visible" class="st-modal">
       <div class="st-modal-wrapper">
         <div ref="stModalRef" class="st-modal-container">
-
           <div class="st-modal__header">
             <slot name="header"> default header </slot>
-                      <div class="controls">
-          <span v-if="showBackButton" class="st-modal__back-button" @click="$emit('back')" >
-            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h17M8 13L2 7l6-6" stroke="#FAF9FC" stroke-width="2"/></svg>
-          </span>
-          <span
-            v-if="showCloseButton"
-            class="st-modal__close-button"
-            @click="$emit('close')"
-          >
-            <svg
-              width="18"
-              height="14"
-              viewBox="0 0 18 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 1l12 12M3 13L15 1"
-                stroke="#FAF9FC"
-                stroke-width="2"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </span>
-          </div>
+            <div class="controls">
+              <span
+                v-if="showBackButton"
+                class="st-modal__back-button"
+                @click="$emit('back')"
+              >
+                <svg
+                  width="19"
+                  height="14"
+                  viewBox="0 0 19 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 7h17M8 13L2 7l6-6"
+                    stroke="#FAF9FC"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                v-if="showCloseButton"
+                class="st-modal__close-button"
+                @click="$emit('close')"
+              >
+                <svg
+                  width="18"
+                  height="14"
+                  viewBox="0 0 18 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 1l12 12M3 13L15 1"
+                    stroke="#FAF9FC"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
           </div>
 
           <div class="st-modal__body">

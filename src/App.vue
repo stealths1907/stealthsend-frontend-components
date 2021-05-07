@@ -191,7 +191,7 @@ export default {
   setup() {
     const showModal = ref(false)
     const accountModal = ref('test dummy')
-    const currentStep = ref(1);
+    const currentStep = ref(1)
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',

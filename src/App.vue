@@ -72,7 +72,7 @@
     <StModal
       show-back-button
       :steps="3"
-      :current-step="1"
+      :current-step="currentStep"
       :visible="showModal"
       @close="showModal = false"
     >
@@ -86,7 +86,7 @@
       </template>
       <template #footer>
         <StButton color="secondary" @click="showModal = false">Cancel</StButton>
-        <StButton color="white" @click="showModal = false">Submit</StButton>
+        <StButton color="white" @click="currentStep = 2">Submit</StButton>
       </template>
     </StModal>
     <button @click="showModal = true">Show modal</button>
@@ -191,6 +191,7 @@ export default {
   setup() {
     const showModal = ref(false)
     const accountModal = ref('test dummy')
+    const currentStep = ref(1);
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
@@ -256,7 +257,8 @@ export default {
       tableData,
       tableColumns,
       showModal,
-      accountModal
+      accountModal,
+      currentStep
     }
   },
   methods: {

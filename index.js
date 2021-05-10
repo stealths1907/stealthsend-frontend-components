@@ -11,6 +11,7 @@ import StPagination from './src/components/StPagination.vue'
 import StRadio from './src/components/StRadio.vue'
 import StStatus from './src/components/StStatus.vue'
 import StTable from './src/components/StTable.vue'
+import StSwitch from './src/components/StSwitch.vue'
 import StTag from './src/components/StTag.vue'
 import StTooltip from './src/components/StTooltip.vue'
 export {
@@ -26,6 +27,7 @@ export {
     StTable,
     StDropdown,
     StClipboard,
+    StSwitch,
     StTooltip,
     StTag,
     StIcon

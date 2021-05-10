@@ -1,6 +1,8 @@
 <template>
   <div class="uikit-container">
     <h1>UI Kit</h1>
+    <h2>TOGGLE</h2>
+    <StSwitch></StSwitch>
     <h2>ICONS</h2>
     <StIcon name="chart"></StIcon>
     <h2>Tag</h2>
@@ -165,6 +167,7 @@ import StPagination from './components/StPagination.vue'
 import StRadio from './components/StRadio.vue'
 import StStatus from './components/StStatus.vue'
 import StTable from './components/StTable.vue'
+import StSwitch from './components/StSwitch.vue'
 import StTooltip from './components/StTooltip.vue'
 import StTag from './components/StTag.vue'
 import StIcon from './components/StIcon.vue'
@@ -183,6 +186,7 @@ export default {
     StPagination,
     StStatus,
     StTable,
+    StSwitch,
     StDropdown,
     StClipboard,
     StTooltip,

@@ -13,7 +13,40 @@
     <br />
     <br />
     <h2>Inputs</h2>
-    <StInput v-model="bla" placeholder="aaaa"></StInput>
+    <div style="padding: 10px;">
+      <StAmount label="Amount" v-model="bla" placeholder="Amount"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4445 11.5557L14.2222 14.2223L18 11.5557" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M14.2222 14.2222L14.2222 1.77773" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M4.77777 1.77783V14.2223" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M1 4.4445L4.77778 1.77783L8.55555 4.4445" stroke="#E5E4E8" stroke-width="2"/>
+</svg>
+</StAmount>
+    </div>
+    <div style="background-color: #140435; padding: 10px;">
+      <StAmount label="Amount" color="dark" v-model="bla" placeholder="Amount"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4445 11.5557L14.2222 14.2223L18 11.5557" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M14.2222 14.2222L14.2222 1.77773" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M4.77777 1.77783V14.2223" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M1 4.4445L4.77778 1.77783L8.55555 4.4445" stroke="#E5E4E8" stroke-width="2"/>
+</svg>
+</StAmount>
+    </div>
+    <StInput v-model="bla" placeholder="aaaa"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4445 11.5557L14.2222 14.2223L18 11.5557" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M14.2222 14.2222L14.2222 1.77773" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M4.77777 1.77783V14.2223" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M1 4.4445L4.77778 1.77783L8.55555 4.4445" stroke="#E5E4E8" stroke-width="2"/>
+</svg>
+</StInput>
+    <div style="background-color: #140435; padding: 10px;">
+      <StInput color="dark" v-model="bla" placeholder="aaaa"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4445 11.5557L14.2222 14.2223L18 11.5557" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M14.2222 14.2222L14.2222 1.77773" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M4.77777 1.77783V14.2223" stroke="#E5E4E8" stroke-width="2"/>
+<path d="M1 4.4445L4.77778 1.77783L8.55555 4.4445" stroke="#E5E4E8" stroke-width="2"/>
+</svg>
+</StInput>
+    </div>
     <StInput
       v-model="bla"
       has-error
@@ -160,6 +193,7 @@ import StCheckbox from './components/StCheckbox.vue'
 import StClipboard from './components/StClipboard.vue'
 import StDropdown from './components/StDropdown.vue'
 import StInput from './components/StInput.vue'
+import StAmount from './components/StAmount.vue'
 import StLink from './components/StLink.vue'
 import StLoading from './components/StLoading.vue'
 import StModal from './components/StModal.vue'
@@ -181,6 +215,7 @@ export default {
     StCheckbox,
     StRadio,
     StInput,
+    StAmount,
     StLoading,
     StModal,
     StPagination,
@@ -193,6 +228,7 @@ export default {
     StTag
   },
   setup() {
+    const bla = ref('')
     const showModal = ref(false)
     const accountModal = ref('test dummy')
     const currentStep = ref(1)
@@ -258,6 +294,7 @@ export default {
       { key: 'blockHeight', title: 'Blockheight' }
     ])
     return {
+      bla,
       tableData,
       tableColumns,
       showModal,

@@ -1,19 +1,19 @@
 <template>
   <fieldset
-    class="st-input"
+    class="st-amount"
     :class="{
       'has-error': hasError,
-      'st-input--is-dark': color === 'dark',
-      'st-input--is-not-empty': modelValue.length > 0
+      'st-amount--is-dark': color === 'dark',
+      'st-amount--is-not-empty': modelValue.length > 0
     }"
   >
     <input
-      ref="input"
+      ref="amount"
       :type="type"
       :disabled="disabled"
       :placeholder="placeholder"
       autocomplete="off"
-      class="st-input__inner"
+      class="st-amount__inner"
       :class="{ 'is-disabled': disabled, 'is-dirty': modelValue.length > 0 }"
       :value="modelValue"
       @input="inputChange($event.target.value)"
@@ -26,7 +26,7 @@
 <script>
 import { ref } from 'vue'
 export default {
-  name: 'StInput',
+  name: 'StAmount',
   props: {
     color: {
       type: String,
@@ -112,5 +112,5 @@ export default {
 </script>
 
 <style>
-@import '../styles/components/StInput/StInput.css';
+@import '../styles/components/StAmount/StAmount.css';
 </style>

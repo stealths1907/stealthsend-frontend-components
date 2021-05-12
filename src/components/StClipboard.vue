@@ -1,6 +1,6 @@
 <template>
   <span class="st-clipboard" @click="copyToClipboard"
-    >Copy to clipboard (click me)</span
+    ><slot>Copy to clipboard (click me)</slot></span
   >
 </template>
 

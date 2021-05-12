@@ -7,9 +7,9 @@
             <slot name="header"> default header </slot>
             <div class="controls">
               <span
-                v-if="showBackButton"
+                v-if="showBackButton && currentStep > 1"
                 class="st-modal__back-button"
-                @click="$emit('back')"
+                @click="stepBack"
               >
                 <svg
                   width="19"
@@ -127,8 +127,14 @@ export default {
         ctx.emit('close')
       }
     })
+    function stepBack() {
+      let previousStep = props.currentStep - 1
+      if (props.currentStep > 1) {
+        ctx.emit('back', previousStep)
+      }
+    }
 
-    return { stModalRef }
+    return { stModalRef, stepBack }
   }
 }
 </script>

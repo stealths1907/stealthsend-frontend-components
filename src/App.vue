@@ -202,14 +202,24 @@
       :current-step="currentStep"
       :visible="showModal"
       @close="showModal = false"
+      @back="goBack"
     >
       <template #header> Modal title </template>
       <template #body>
-        <StInput v-model="accountModal" color="dark" label="Account"></StInput>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-        aspernatur? Necessitatibus hic a ullam commodi! Nostrum deserunt facere
-        ut ducimus unde in, animi qui soluta, omnis praesentium, incidunt
-        voluptatum quae.
+        <div v-if="currentStep === 1">
+          <StInput
+            v-model="accountModal"
+            color="dark"
+            label="Account"
+          ></StInput>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+          aspernatur? Necessitatibus hic a ullam commodi! Nostrum deserunt
+          facere ut ducimus unde in, animi qui soluta, omnis praesentium,
+          incidunt voluptatum quae.
+        </div>
+        <div v-if="currentStep === 2">
+          sadasdasdads
+        </div>
       </template>
       <template #footer>
         <StButton color="secondary" @click="showModal = false">Cancel</StButton>
@@ -386,6 +396,9 @@ export default {
       },
       { key: 'blockHeight', title: 'Blockheight' }
     ])
+    function goBack(step) {
+      currentStep.value = step
+    }
     return {
       bla,
       blabla,
@@ -393,7 +406,8 @@ export default {
       tableColumns,
       showModal,
       accountModal,
-      currentStep
+      currentStep,
+      goBack
     }
   },
   methods: {

@@ -1,21 +1,27 @@
 <template>
-  <fieldset 
-    class="st-amount" 
+  <fieldset
+    class="st-amount"
     :class="{
       'has-error': hasError,
       'st-amount--is-dark': color === 'dark',
-      'st-amount--is-not-empty': formattedValue && formattedValue.replace('$', '') > 0
-    }">
-    <input 
-        ref="inputRef"
-        :type="type"
-        :disabled="disabled"
-        autocomplete="off"
-        :placeholder="placeholder"
-        class="st-amount__inner"
-        :class="{ 'is-disabled': disabled, 'is-dirty': formattedValue && formattedValue.replace('$', '') > 0 }"
-        :value="formattedValue" 
-        @input="inputChange($event.target.value)" />
+      'st-amount--is-not-empty':
+        formattedValue && formattedValue.replace('$', '') > 0
+    }"
+  >
+    <input
+      ref="inputRef"
+      :type="type"
+      :disabled="disabled"
+      autocomplete="off"
+      :placeholder="placeholder"
+      class="st-amount__inner"
+      :class="{
+        'is-disabled': disabled,
+        'is-dirty': formattedValue && formattedValue.replace('$', '') > 0
+      }"
+      :value="formattedValue"
+      @input="inputChange($event.target.value)"
+    />
     <div v-if="$slots.default" class="st-icon"><slot /></div>
     <label>{{ hasError ? errorMessages : label }}</label>
   </fieldset>
@@ -23,7 +29,7 @@
 
 <script>
 import { ref } from 'vue'
-import useCurrencyInput from "vue-currency-input";
+import useCurrencyInput from 'vue-currency-input'
 export default {
   name: 'StAmount',
   props: {
@@ -48,8 +54,8 @@ export default {
       type: String,
       required: false,
       default: () => {
-        return '';
-      },
+        return ''
+      }
     },
     options: {
       type: Object,
@@ -112,7 +118,7 @@ export default {
   emits: ['update:formattedValue'],
   setup(props, { emit }) {
     let innerValue = ref('')
-    const { formattedValue, inputRef } = useCurrencyInput(props.options);
+    const { formattedValue, inputRef } = useCurrencyInput(props.options)
     function inputChange(value) {
       innerValue.value = value
       emit('update:formattedValue', value)

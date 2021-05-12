@@ -46,7 +46,11 @@
       </StAmount> -->
     </div>
     <div style="background-color: #140435; padding: 10px;">
-      <StAmount label="Amount" color="dark" v-model="blabla" placeholder="Amount"
+      <StAmount
+        label="Amount"
+        color="dark"
+        v-model="blabla"
+        placeholder="Amount"
         ><svg
           width="19"
           height="16"

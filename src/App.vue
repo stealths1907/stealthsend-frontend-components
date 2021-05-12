@@ -14,7 +14,7 @@
     <br />
     <h2>Inputs</h2>
     <div style="padding: 10px;">
-      <StAmount label="Amount" v-model="bla" placeholder="Amount"
+      <!-- <StAmount label="Amount" v-model="bla" placeholder="Amount"
         ><svg
           width="19"
           height="16"
@@ -43,10 +43,10 @@
             stroke-width="2"
           />
         </svg>
-      </StAmount>
+      </StAmount> -->
     </div>
     <div style="background-color: #140435; padding: 10px;">
-      <StAmount label="Amount" color="dark" v-model="bla" placeholder="Amount"
+      <StAmount label="Amount" color="dark" v-model="blabla" placeholder="Amount"
         ><svg
           width="19"
           height="16"
@@ -317,6 +317,7 @@ export default {
   },
   setup() {
     const bla = ref('')
+    const blabla = ref(null)
     const showModal = ref(false)
     const accountModal = ref('test dummy')
     const currentStep = ref(1)
@@ -383,6 +384,7 @@ export default {
     ])
     return {
       bla,
+      blabla,
       tableData,
       tableColumns,
       showModal,

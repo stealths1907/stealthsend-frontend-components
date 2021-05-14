@@ -93,7 +93,12 @@ export default {
       default: () => {
         return 'No label'
       }
-    }
+    },
+    name: {
+      type: String,
+      required: false,
+      default: 'missing-name'
+    },
   },
   emits: ['update:modelValue'],
   setup(props, { emit }) {

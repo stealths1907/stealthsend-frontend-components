@@ -7,11 +7,13 @@
       type="checkbox"
       class="st-checkbox__input"
       :value="label"
+      :checked="modelValue"
       @input="handleInput"
     />
     <span class="st-checkbox__checkmark">
       <span class="check"></span>
     </span>
+    {{ modelValue }}
   </label>
 </template>
 

@@ -335,6 +335,7 @@ export default {
     const showModal = ref(false)
     const accountModal = ref('test dummy')
     const currentStep = ref(1)
+    const checkboxPrvi = ref(false)
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
@@ -407,7 +408,8 @@ export default {
       showModal,
       accountModal,
       currentStep,
-      goBack
+      goBack,
+      checkboxPrvi
     }
   },
   methods: {

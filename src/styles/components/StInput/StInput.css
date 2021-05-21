@@ -65,7 +65,7 @@
     font-size: 12px;
 }
 .st-input--is-dark label {
-    color: var(--grey50);
+    color: var(--grey50) !important;
     font-size: 12px;
     letter-spacing: 0.12px;
     line-height: 24px;
@@ -121,4 +121,15 @@ color: var(--grey100);
 }
 .st-input:focus-within::after {
     width: 100%;
+}
+.st-input--readonly input {
+    cursor: default;
+    border-bottom: 2px solid var(--grey100) !important;
+    caret-color: transparent;
+}
+.st-input--readonly:after{
+    display: none;
+}
+.st-input--readonly label {
+    color: var(--text);
 }

@@ -4,7 +4,8 @@
     :class="{
       'has-error': hasError,
       'st-input--is-dark': color === 'dark',
-      'st-input--is-not-empty': modelValue.length > 0
+      'st-input--is-not-empty': modelValue.length > 0,
+      'st-input--readonly': readonly
     }"
   >
     <input
@@ -53,6 +54,13 @@ export default {
       }
     },
     disabled: {
+      type: Boolean,
+      required: false,
+      default: () => {
+        return false
+      }
+    },
+    readonly: {
       type: Boolean,
       required: false,
       default: () => {

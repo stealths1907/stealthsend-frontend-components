@@ -13,7 +13,6 @@
     <span class="st-checkbox__checkmark">
       <span class="check"></span>
     </span>
-    {{ modelValue }}
   </label>
 </template>
 

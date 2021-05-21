@@ -5,7 +5,6 @@ Stealth desktop App for MacOs, Linux and Windows.
 - Slack channel: https://wearebarrage.slack.com/archives/G01KQNE67PV
 
 Main technologies:
-
 - Vue (3.0.x)
 - PostCSS (8.2.x)
 

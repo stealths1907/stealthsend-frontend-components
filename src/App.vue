@@ -47,9 +47,9 @@
     </div>
     <div style="background-color: #140435; padding: 10px;">
       <StAmount
+        v-model="blabla"
         label="Amount"
         color="dark"
-        v-model="blabla"
         placeholder="Amount"
         ><svg
           width="19"
@@ -81,7 +81,7 @@
         </svg>
       </StAmount>
     </div>
-    <StInput v-model="bla" placeholder="aaaa"
+    <StInput v-model="bla" readonly placeholder="aaaa"
       ><svg
         width="19"
         height="16"
@@ -108,7 +108,7 @@
       </svg>
     </StInput>
     <div style="background-color: #140435; padding: 10px;">
-      <StInput color="dark" v-model="bla" placeholder="aaaa"
+      <StInput v-model="bla" readonly color="dark" placeholder="aaaa"
         ><svg
           width="19"
           height="16"
@@ -335,6 +335,7 @@ export default {
     const showModal = ref(false)
     const accountModal = ref('test dummy')
     const currentStep = ref(1)
+    const checkboxPrvi = ref(false)
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
@@ -407,7 +408,8 @@ export default {
       showModal,
       accountModal,
       currentStep,
-      goBack
+      goBack,
+      checkboxPrvi
     }
   },
   methods: {

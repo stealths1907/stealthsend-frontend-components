@@ -2,7 +2,13 @@
   <transition name="fade">
     <div v-if="visible" class="st-modal">
       <div class="st-modal-wrapper">
-        <div ref="stModalRef" class="st-modal-container">
+        <div
+          ref="stModalRef"
+          class="st-modal-container"
+          :class="[
+            light ? 'st-modal-container--light' : 'st-modal-container--dark'
+          ]"
+        >
           <div class="st-modal__header">
             <slot name="header"> default header </slot>
             <div class="controls">
@@ -116,6 +122,11 @@ export default {
       type: Boolean,
       required: false,
       default: true
+    },
+    light: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   emits: ['close', 'back'],
@@ -162,7 +173,6 @@ export default {
   cursor: pointer;
 }
 .st-modal__header {
-  color: var(--grey50);
   font-family: var(--primary-font);
   font-weight: 700;
   font-size: 18px;
@@ -172,6 +182,12 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.st-modal-container--dark .st-modal__header {
+  color: var(--grey50);
+}
+.st-modal-container--light .st-modal__header {
+  color: var(--grey900);
 }
 .st-modal__body {
   margin: 45px 0 65px 0;
@@ -211,13 +227,19 @@ export default {
   width: 520px;
   margin: 0px auto;
   padding: 32px;
-  background-color: var(--marine900);
-  color: var(--grey100);
   border-radius: 2px;
   box-shadow: 4px 4px 8px rgba(20, 4, 53, 0.05),
     15px 15px 30px rgba(20, 4, 53, 0.15);
   transition: all 0.3s ease;
   font-family: var(--primary-font);
+}
+.st-modal-container--dark {
+  background-color: var(--marine900);
+  color: var(--grey100);
+}
+.st-modal-container--light {
+  background-color: var(--white);
+  color: var(--grey900);
 }
 .modal-default-button {
   display: block;

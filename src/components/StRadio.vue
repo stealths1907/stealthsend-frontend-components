@@ -1,25 +1,32 @@
 <template>
   <label class="st-radio" :for="id">
-    <span class="st-radio__label">
-      <slot></slot>
-    </span>
     <input
       :id="id"
       :name="name"
       type="radio"
-      class="st-radio__input"
-      :value="label"
-      @input="$emit('update:modelValue', label)"
+      :class="`st-radio__input st-radio__input-${type}`"
+      :checked="isChecked"
+      :value="modelValue"
+      v-bind="$attrs"
+      @change="handleChange"
     />
-    <span class="st-radio__checkmark"></span>
+    <span class="st-radio__label">
+      <slot></slot>
+    </span>
+    <span :class="`st-radio__${type}`"></span>
   </label>
 </template>
 
 <script>
-// import { ref } from 'vue'
+import { computed } from 'vue'
 export default {
   name: 'StRadio',
+  inheritAttrs: false,
   props: {
+    type: {
+      type: String,
+      default: 'round'
+    },
     id: {
       type: String,
       required: true
@@ -32,12 +39,23 @@ export default {
       type: String,
       required: true
     },
-    label: {
+    value: {
       type: String,
       required: true
     }
   },
-  emits: ['update:modelValue']
+  emits: ['update:modelValue'],
+  setup(props, { emit }) {
+    function handleChange() {
+      emit('update:modelValue', props.value)
+    }
+    const isChecked = computed(() => props.modelValue === props.value)
+
+    return {
+      handleChange,
+      isChecked
+    }
+  }
 }
 </script>
 

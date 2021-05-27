@@ -1,7 +1,7 @@
 .st-radio {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
-    padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -14,25 +14,31 @@
     letter-spacing: 0.12px;
     line-height: 25px;
 }
-.st-radio__label {
-    margin-left: 10px;
-}
 .st-radio__input {
    /* Hide the browser's default radio button */
-    position: absolute;
+   pointer-events: none;
+   margin: 0 18px 0 0;
     opacity: 0;
     cursor: pointer;
    /* When the radio button is checked, add a blue background */
    /* shot dot indicator when selected */
 }
-.st-radio__input:checked ~ .st-radio__checkmark {
+.st-radio__input-round {
+    width: 24px;
+    height: 24px;
+}
+.st-radio__input-square {
+    width: 16px;
+    height: 16px;
+}
+.st-radio__input:checked ~ .st-radio__round {
     background-color: transparent;
     border: 2px solid var(--marine500);
 }
-.st-radio__input:checked ~ .st-radio__checkmark:after {
+.st-radio__input:checked ~ .st-radio__round:after {
     display: block;
 }
-.st-radio__checkmark {
+.st-radio__round {
    /* Create a custom radio button */
     position: absolute;
     top: 0;
@@ -45,7 +51,7 @@
     margin-right: 16px;
    /* create indikator dot */
 }
-.st-radio__checkmark:after {
+.st-radio__round:after {
     content: '';
     position: absolute;
     display: none;
@@ -55,4 +61,48 @@
     height: 12px;
     border-radius: 50%;
     background: var(--marine500);
+}
+
+.st-radio__input:checked ~ .st-radio__square {
+    background-color: var(--grey100);
+}
+.st-radio__input:checked ~ .st-radio__square:after {
+    background: var(--white);
+}
+.st-radio__input:checked ~ .st-radio__square:before {
+    opacity: 1;
+}
+.st-radio__square {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--grey50);
+    border-radius: 4px;
+    border: 1px solid rgba(229, 228, 232, 0.15);
+}
+.st-radio__square:after {
+    content: '';
+    position: absolute;
+    /* display: none; */
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: var(--grey100);
+}
+
+.st-radio__square:before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    background: var(--marine500);
+    border-radius: 2px;
+    transition: 0.3s;
 }

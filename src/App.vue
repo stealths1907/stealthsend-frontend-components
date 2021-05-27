@@ -156,25 +156,30 @@
     <br />
     <br />
     <StRadio
-      :id="'uikitradio1'"
       v-model="radioValue"
       :name="'uikitradio'"
-      :label="'option 1'"
+      value="option 1"
       >option 1</StRadio
     >
     <StRadio
-      :id="'uikitradio2'"
       v-model="radioValue"
       :name="'uikitradio'"
-      :label="'option 2'"
+      value="option 2"
       >option 2</StRadio
     >
     <StRadio
-      :id="'uikitradio3'"
-      v-model="radioValue"
+    v-model="radioValue"
+      type="square"
       :name="'uikitradio'"
-      :label="'option 3'"
-      >option 3</StRadio
+      value="option 3"
+      >option 1</StRadio
+    >
+    <StRadio
+    v-model="radioValue"
+      type="square"
+      :name="'uikitradio'"
+      value="option 4"
+      >option 2</StRadio
     >
     {{ radioValue }}
     <br />
@@ -336,6 +341,7 @@ export default {
     const accountModal = ref('test dummy')
     const currentStep = ref(1)
     const checkboxPrvi = ref(false)
+    const radioValue = ref('option 1')
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
@@ -409,7 +415,8 @@ export default {
       accountModal,
       currentStep,
       goBack,
-      checkboxPrvi
+      checkboxPrvi,
+      radioValue
     }
   },
   methods: {

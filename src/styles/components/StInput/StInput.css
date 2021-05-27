@@ -18,9 +18,6 @@
 .st-icon path {
     stroke: var(--marine500);
 }
-.st-input--is-dark > .st-icon path {
-    stroke: var(--grey100);
-}
 .st-input:after {
     content: '';
     display: block;
@@ -64,19 +61,6 @@
     line-height: 20px;
     font-size: 12px;
 }
-.st-input--is-dark label {
-    color: var(--grey50) !important;
-    font-size: 12px;
-    letter-spacing: 0.12px;
-    line-height: 24px;
-    transition: all 0.25s ease-in-out;
-    top: -20px;
-    position: absolute;
-    font-weight: 700;
-}
-.st-input--is-dark > input::placeholder {
-    color: var(--grey100);
-}
 .st-input input {
     box-sizing: border-box;
     width: 100%;
@@ -88,9 +72,6 @@
     position: relative;
     background: transparent;
     border-bottom: 2px solid var(--grey100);
-}
-.st-input--is-dark input {
-color: var(--grey100);
 }
 .st-input input:hover {
    /* color */

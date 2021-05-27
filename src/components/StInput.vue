@@ -3,7 +3,6 @@
     class="st-input"
     :class="{
       'has-error': hasError,
-      'st-input--is-dark': color === 'dark',
       'st-input--is-not-empty': modelValue.length > 0,
       'st-input--readonly': readonly
     }"
@@ -20,7 +19,6 @@
       @input="inputChange($event.target.value)"
     />
     <div v-if="$slots.default" class="st-icon"><slot /></div>
-    <label>{{ hasError ? errorMessages : label }}</label>
   </fieldset>
 </template>
 
@@ -29,16 +27,6 @@ import { ref } from 'vue'
 export default {
   name: 'StInput',
   props: {
-    color: {
-      type: String,
-      required: false,
-      default: () => {
-        return 'default'
-      },
-      validator: (value) => {
-        return ['default', 'dark'].includes(value)
-      }
-    },
     icon: {
       type: String,
       required: false,
@@ -86,20 +74,6 @@ export default {
       required: false,
       default: () => {
         return false
-      }
-    },
-    errorMessages: {
-      type: String,
-      required: false,
-      default: () => {
-        return null
-      }
-    },
-    label: {
-      type: String,
-      required: false,
-      default: () => {
-        return 'No label'
       }
     },
     name: {

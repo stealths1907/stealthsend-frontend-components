@@ -3,7 +3,6 @@
     class="st-amount"
     :class="{
       'has-error': hasError,
-      'st-amount--is-dark': color === 'dark',
       'st-amount--is-not-empty':
         formattedValue && formattedValue.replace('$', '') > 0
     }"
@@ -23,7 +22,6 @@
       @input="inputChange($event.target.value)"
     />
     <div v-if="$slots.default" class="st-icon"><slot /></div>
-    <label>{{ hasError ? errorMessages : label }}</label>
   </fieldset>
 </template>
 
@@ -33,16 +31,6 @@ import useCurrencyInput from 'vue-currency-input'
 export default {
   name: 'StAmount',
   props: {
-    color: {
-      type: String,
-      required: false,
-      default: () => {
-        return 'default'
-      },
-      validator: (value) => {
-        return ['default', 'dark'].includes(value)
-      }
-    },
     icon: {
       type: String,
       required: false,
@@ -98,20 +86,6 @@ export default {
       required: false,
       default: () => {
         return false
-      }
-    },
-    errorMessages: {
-      type: String,
-      required: false,
-      default: () => {
-        return null
-      }
-    },
-    label: {
-      type: String,
-      required: false,
-      default: () => {
-        return 'No label'
       }
     }
   },

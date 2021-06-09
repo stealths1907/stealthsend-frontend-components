@@ -26,7 +26,7 @@
                 >
                   <path
                     d="M2 7h17M8 13L2 7l6-6"
-                    stroke="#FAF9FC"
+                    :stroke="light ? '#4E00F6' : '#FAF9FC'"
                     stroke-width="2"
                   />
                 </svg>
@@ -45,7 +45,7 @@
                 >
                   <path
                     d="M3 1l12 12M3 13L15 1"
-                    stroke="#FAF9FC"
+                    :stroke="light ? '#4E00F6' : '#FAF9FC'"
                     stroke-width="2"
                     stroke-linejoin="round"
                   />
@@ -164,13 +164,18 @@ export default {
 }
 .st-modal__close-button {
   cursor: pointer;
+  transition: 0.3s;
+}
+.st-modal__close-button:hover {
+  opacity: 0.5;
 }
 .st-modal__back-button {
   cursor: pointer;
   margin-right: 26px;
+  transition: 0.3s;
 }
-.st-modal__close-button:hover {
-  cursor: pointer;
+.st-modal__back-button:hover {
+  opacity: 0.5;
 }
 .st-modal__header {
   font-family: var(--primary-font);
@@ -188,6 +193,12 @@ export default {
 }
 .st-modal-container--light .st-modal__header {
   color: var(--grey900);
+}
+.st-modal-container--light .st-modal__stepper .step {
+  background: var(--grey100);
+}
+.st-modal-container--light .st-modal__stepper .step.step--active {
+  background: var(--grey300);
 }
 .st-modal__body {
   margin: 45px 0 65px 0;

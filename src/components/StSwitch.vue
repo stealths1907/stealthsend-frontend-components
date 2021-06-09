@@ -1,89 +1,165 @@
 <template>
-  <div
-    class="st-switch"
-    :class="{ 'st-switch--is-off': !isOn }"
-    @click="toggle"
-  >
-    <div class="st-switch__label">
-      <svg
-        width="9"
-        height="12"
-        viewBox="0 0 9 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.5 5l1-5-6 7h3l-1 5 6-7h-3z"
-          :fill="[isOn ? '#E0D3FC' : '#4E00F6']"
-        />
-      </svg>
+  <label :class="`st-switch--${theme}`">
+    <input
+      type="checkbox"
+      :class="`st-switch__input ${type}`"
+      :value="label"
+      :checked="modelValue"
+      @input="handleInput"
+    />
+    <div v-if="type === 'simple'" class="st-switch--simple">
+      <div class="st-switch__bullet" />
     </div>
-  </div>
+    <div v-if="type === 'thunder'" class="st-switch--thunder">
+      <div class="st-switch--thunder-icon">
+        <svg
+          width="9"
+          height="12"
+          viewBox="0 0 9 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M5.5 5L6.5 0L0.5 7H3.5L2.5 12L8.5 5H5.5Z" fill="#E0D3FC" />
+        </svg>
+      </div>
+    </div>
+    <span class="st-switch__label">
+      <slot />
+    </span>
+  </label>
 </template>
 
 <script>
-import { ref } from 'vue'
 export default {
   name: 'StSwitch',
-  emits: ['input'],
-  setup(_, ctx) {
-    const isOn = ref(false)
-    function toggle() {
-      isOn.value = !isOn.value
-      ctx.emit('input', isOn.value)
+  props: {
+    modelValue: {
+      type: [String, Boolean],
+      required: true
+    },
+    label: {
+      type: [String, Boolean],
+      required: false,
+      default: false
+    },
+    type: {
+      type: String,
+      required: true,
+      default: 'simple',
+      validator: (value) => {
+        return ['simple', 'thunder'].includes(value)
+      }
+    },
+    theme: {
+      type: String,
+      required: true,
+      default: 'light',
+      validator: (value) => {
+        return ['light', 'dark'].includes(value)
+      }
+    }
+  },
+  emits: ['update:modelValue'],
+  setup(props, ctx) {
+    function handleInput(event) {
+      let isChecked = event.target.checked
+      ctx.emit('update:modelValue', isChecked)
     }
 
     return {
-      toggle,
-      isOn
+      handleInput
     }
   }
 }
 </script>
 
 <style scoped>
-.st-switch {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background: transparent;
+.st-switch--light,
+.st-switch--dark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.st-switch--dark .st-switch--thunder-icon {
+  background-color: var(--marine500);
+}
+.st-switch--light .st-switch__label {
+  color: var(--text);
+}
+.st-switch--dark .st-switch__label {
+  color: var(--white);
+}
+.st-switch__input.thunder {
+  position: absolute;
+  margin: 0;
   width: 60px;
-  border: 1.5px solid var(--grey200);
-  border-radius: 1.5rem;
-  display: inline-flex;
-  flex-direction: column;
-  height: 26px;
+  height: 32px;
+  opacity: 0;
+}
+svg path {
   transition: 0.3s;
 }
-.st-switch.st-switch--is-off {
-  /* background-color: #fce5e8; */
-  /* border-color: #fbdde0; */
+.st-switch__input:checked ~ .st-switch--thunder .st-switch--thunder-icon {
+  transform: translateX(27px);
+  background-color: var(--grey50);
 }
-.st-switch.st-switch--is-off .st-switch__label {
-  background: var(--grey50);
-  color: var(--marine500);
-  /* align-self: flex-end; */
-  transform: translateX(33px);
-
-  margin-top: 1px;
-  margin-right: 1px;
+.st-switch__input:checked
+  ~ .st-switch--thunder
+  .st-switch--thunder-icon
+  svg
+  path {
+  fill: var(--marine500);
 }
-.st-switch__label {
-  width: 24px;
-  height: 24px;
-  line-height: 1.5rem;
-  text-align: center;
-  font-size: 0.6rem;
-  background: var(--marine800);
-  color: #fff;
-  border-radius: 50%;
-
-  margin-top: 1px;
-  margin-left: 1px;
+.st-switch__input:checked ~ .st-switch--simple .st-switch__bullet {
+  transform: translateX(19px);
+  background-color: var(--marine500);
+}
+.st-switch--thunder {
+  position: relative;
+  width: 60px;
+  height: 32px;
+  border: 1.5px solid var(--grey200);
+  border-radius: 18px;
+}
+.st-switch--thunder-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  background-color: var(--marine800);
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  transition: 0.3s;
+}
+.st-switch__input.simple {
+  position: absolute;
+  margin: 0;
+  width: 46px;
+  height: 24px;
+  opacity: 0;
+}
+.st-switch--simple {
+  position: relative;
+  width: 46px;
+  height: 24px;
+  border: 1.5px solid var(--grey200);
+  border-radius: 19px;
+}
+.st-switch--simple .st-switch__bullet {
+  width: 19px;
+  height: 19px;
+  border-radius: 18px;
+  background-color: var(--grey100);
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  transition: 0.3s;
+}
+.st-switch__label {
+  margin-left: 24px;
 }
 </style>

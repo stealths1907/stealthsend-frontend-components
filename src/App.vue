@@ -2,7 +2,13 @@
   <div class="uikit-container">
     <h1>UI Kit</h1>
     <h2>TOGGLE</h2>
-    <StSwitch></StSwitch>
+    <StSwitch v-model="isSwitch">Test</StSwitch>
+    <StSwitch v-model="isSwitch" type="thunder"> Test</StSwitch>
+    <div style="background-color: #140435; padding: 10px;">
+      <StSwitch v-model="isSwitch" theme="dark">Test</StSwitch>
+      <StSwitch v-model="isSwitch" theme="dark" type="thunder"> Test</StSwitch>
+    </div>
+    {{ isSwitch }}
     <h2>ICONS</h2>
     <StIcon name="chart"></StIcon>
     <h2>Tag</h2>
@@ -200,6 +206,7 @@
       :steps="3"
       :current-step="currentStep"
       :visible="showModal"
+      light
       @close="showModal = false"
       @back="goBack"
     >
@@ -336,6 +343,7 @@ export default {
     const currentStep = ref(1)
     const checkboxPrvi = ref(false)
     const radioValue = ref('option 1')
+    const isSwitch = ref(false)
     const tableData = ref([
       {
         address: 'RxLvZSm4gMmzoS5VyJxm24FaGDRJjVPv9z',
@@ -410,7 +418,8 @@ export default {
       currentStep,
       goBack,
       checkboxPrvi,
-      radioValue
+      radioValue,
+      isSwitch
     }
   },
   methods: {

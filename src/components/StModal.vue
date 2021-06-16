@@ -141,7 +141,7 @@ export default {
     watch(
       () => props.visible,
       (newVal, oldVal) => {
-        if (!newVal && oldVal) {
+        if (newVal && !oldVal) {
           ctx.emit('open', true)
         }
       }

@@ -138,14 +138,14 @@ export default {
         ctx.emit('close')
       }
     })
-        watch(
+    watch(
       () => props.visible,
       (newVal, oldVal) => {
         if (!newVal && oldVal) {
           ctx.emit('open', true)
         }
       }
-    );
+    )
     function stepBack() {
       let previousStep = props.currentStep - 1
       if (props.currentStep > 1) {

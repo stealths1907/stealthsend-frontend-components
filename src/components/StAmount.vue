@@ -4,7 +4,8 @@
     :class="{
       'has-error': hasError,
       'st-amount--is-not-empty':
-        formattedValue && formattedValue.replace('$', '') > 0
+        (formattedValue && formattedValue.replace('$', '') > 0) ||
+        (formattedValue && formattedValue.replace('XST', '') > 0)
     }"
   >
     <input
@@ -16,7 +17,9 @@
       class="st-amount__inner"
       :class="{
         'is-disabled': disabled,
-        'is-dirty': formattedValue && formattedValue.replace('$', '') > 0
+        'is-dirty':
+          (formattedValue && formattedValue.replace('$', '') > 0) ||
+          (formattedValue && formattedValue.replace('XST', '') > 0)
       }"
       :value="formattedValue"
       @input="inputChange($event.target.value)"

@@ -1,6 +1,6 @@
 @import '../../design-tokens/colors.css';
 .st-button {
-  padding: 9px 12px;
+  padding: 9px 64px;
   font-family: var(--primary-font);
   font-size: 12px;
   font-weight: 700;

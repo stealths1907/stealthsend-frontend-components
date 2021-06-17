@@ -1,8 +1,13 @@
 <template>
-  <label class="st-radio" :for="id">
+  <label
+    class="st-radio"
+    :for="id"
+    :class="{ 'st-radio--is-disabled': disabled }"
+  >
     <input
       :id="id"
       :name="name"
+      :disabled="disabled"
       type="radio"
       :class="`st-radio__input st-radio__input-${type}`"
       :checked="isChecked"
@@ -23,6 +28,10 @@ export default {
   name: 'StRadio',
   inheritAttrs: false,
   props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     type: {
       type: String,
       default: 'round'

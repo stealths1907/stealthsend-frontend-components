@@ -82,7 +82,7 @@
 
 <script>
 import { onClickOutside } from '@vueuse/core'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 export default {
   name: 'StModal',
@@ -129,7 +129,7 @@ export default {
       default: false
     }
   },
-  emits: ['close', 'back'],
+  emits: ['close', 'back', 'open'],
   setup(props, ctx) {
     const stModalRef = ref(null)
 
@@ -138,6 +138,14 @@ export default {
         ctx.emit('close')
       }
     })
+    watch(
+      () => props.visible,
+      (newVal, oldVal) => {
+        if (newVal && !oldVal) {
+          ctx.emit('open', true)
+        }
+      }
+    )
     function stepBack() {
       let previousStep = props.currentStep - 1
       if (props.currentStep > 1) {

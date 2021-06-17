@@ -1,5 +1,9 @@
 <template>
-  <label class="st-radio" :for="id" :class="{disabled: 'st-radio--is-disabled'}">
+  <label
+    class="st-radio"
+    :for="id"
+    :class="{ disabled: 'st-radio--is-disabled' }"
+  >
     <input
       :id="id"
       :name="name"
@@ -25,7 +29,7 @@ export default {
   props: {
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     type: {
       type: String,

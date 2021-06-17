@@ -2,7 +2,7 @@
   <label
     class="st-radio"
     :for="id"
-    :class="{ disabled: 'st-radio--is-disabled' }"
+    :class="{ 'st-radio--is-disabled': disabled }"
   >
     <input
       :id="id"

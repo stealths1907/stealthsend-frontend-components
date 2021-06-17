@@ -7,6 +7,7 @@
     <input
       :id="id"
       :name="name"
+      :disabled="disabled"
       type="radio"
       :class="`st-radio__input st-radio__input-${type}`"
       :checked="isChecked"

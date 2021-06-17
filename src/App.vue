@@ -161,7 +161,7 @@
     <h2>Radio</h2>
     <br />
     <br />
-    <StRadio v-model="radioValue" :name="'uikitradio'" value="option 1"
+    <StRadio v-model="radioValue" disabled :name="'uikitradio'" value="option 1"
       >option 1</StRadio
     >
     <StRadio v-model="radioValue" :name="'uikitradio'" value="option 2"

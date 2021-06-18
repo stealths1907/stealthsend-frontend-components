@@ -87,7 +87,7 @@
         </svg>
       </StAmount>
     </div>
-    <StInput v-model="bla" readonly placeholder="aaaa"
+    <StInput v-model="bla" placeholder="aaaa"
       ><svg
         width="19"
         height="16"
@@ -114,7 +114,7 @@
       </svg>
     </StInput>
     <div style="background-color: #140435; padding: 10px;">
-      <StInput v-model="bla" readonly color="dark" placeholder="aaaa"
+      <StInput v-model="bla" color="dark" placeholder="aaaa"
         ><svg
           width="19"
           height="16"

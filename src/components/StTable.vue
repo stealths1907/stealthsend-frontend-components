@@ -87,6 +87,7 @@ export default {
 .table {
   width: 100%;
   border-spacing: 0 12px;
+  font-family: var(--secondary-font);
   /* custom classes for th and td cells */
 }
 .table td {

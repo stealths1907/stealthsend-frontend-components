@@ -187,7 +187,7 @@ export default {
 }
 .st-modal__header {
   font-family: var(--primary-font);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.32px;

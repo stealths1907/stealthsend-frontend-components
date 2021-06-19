@@ -18,8 +18,8 @@
       :class="{
         'is-disabled': disabled,
         'is-dirty':
-          (formattedValue && formattedValue.replace('$', '') > 0) ||
-          (formattedValue && formattedValue.replace('XST', '') > 0)
+          (formattedValue && Number(formattedValue.replace('$', '')) > 0) ||
+          (formattedValue && Number(formattedValue.replace('XST', '')) > 0)
       }"
       :value="formattedValue"
       @input="inputChange($event.target.value)"

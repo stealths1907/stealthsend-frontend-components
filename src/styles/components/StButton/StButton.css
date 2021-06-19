@@ -45,6 +45,7 @@ border-radius: 2px;
   font-size: 12px;
 line-height: 24px;
 font-weight: 700;
+padding: 6px 64px;
 }
 .st-button--white:hover {
   cursor: pointer;

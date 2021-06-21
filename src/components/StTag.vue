@@ -1,5 +1,10 @@
 <template>
-  <div class="st-tag">
+  <div class="st-tag"
+      :class="{
+      'st-tag--is-success': color === 'success',
+      'st-tag--is-danger': color === 'danger',
+    }"
+  >
     <slot />
   </div>
 </template>
@@ -15,7 +20,7 @@ export default {
         return 'success'
       },
       validator: (value) => {
-        return ['success'].includes(value)
+        return ['success', 'danger'].includes(value)
       }
     }
   },
@@ -27,7 +32,6 @@ export default {
 
 <style scoped>
 .st-tag {
-  background: var(--mint200);
   border-radius: 2px;
   font-family: var(--secondary-font);
   font-style: normal;
@@ -39,6 +43,13 @@ export default {
   letter-spacing: 0.12px;
   padding: 0 5px;
   height: 24px;
+}
+.st-tag--is-success {
   color: var(--mint700);
+  background: var(--mint200);
+}
+.st-tag--is-danger {
+  color: var(--mint700);
+  background: var(--mint200);
 }
 </style>

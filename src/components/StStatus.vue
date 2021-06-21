@@ -44,7 +44,7 @@ export default {
   width: 10px;
 }
 .st-status__dot--red {
-  background-color: var(--danger);
+  background-color: var(--red500);
 }
 .st-status__dot--green {
   background-color: var(--success);

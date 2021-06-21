@@ -34,10 +34,10 @@
     transition: all 200ms ease-out;
 }
 .st-amount.has-error label {
-    color: var(--danger) !important;
+    color: var(--red500) !important;
 }
 .st-amount.has-error:after {
-    background-color: var(--danger) !important;
+    background-color: var(--red500) !important;
 }
 .st-amount label {
     position: absolute;

@@ -50,7 +50,7 @@ export default {
   background: var(--mint200);
 }
 .st-tag--is-danger {
-  color: var(--mint700);
-  background: var(--mint200);
+  color: var(--red600);
+  background: var(--red100);
 }
 </style>

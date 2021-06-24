@@ -106,7 +106,8 @@ export default {
   line-height: 24px;
   padding: 18px 6px;
 }
-.table thead tr th:nth-last-child(-n + 2), .table tbody tr td:nth-last-child(-n + 2) {
+.table thead tr th:nth-last-child(-n + 2),
+.table tbody tr td:nth-last-child(-n + 2) {
   text-align: right !important;
 }
 .table .table__row {

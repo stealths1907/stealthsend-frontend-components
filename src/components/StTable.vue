@@ -100,12 +100,14 @@ export default {
 }
 .table thead th {
   text-align: left;
-  color: var(--grey500);
+  color: var(--grey1000);
   font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.23px;
-  line-height: 20px;
+  letter-spacing: 0.12px;
+  line-height: 24px;
   padding: 18px 6px;
+}
+.table thead tr th:nth-last-child(-n + 2), .table tbody tr td:nth-last-child(-n + 2) {
+  text-align: right !important;
 }
 .table .table__row {
   font-size: 14px;

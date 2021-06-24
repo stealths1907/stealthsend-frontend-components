@@ -111,12 +111,6 @@ export default {
   text-align: right !important;
 }
 .table .table__row {
-  font-size: 14px;
-  color: var(--gray1000);
-  letter-spacing: 0.16px;
-  line-height: 20px;
-}
-.table .table__row {
   box-shadow: none;
   border-left: 4px solid transparent;
   transition: 0.22s;
@@ -124,6 +118,10 @@ export default {
 
 .table .table__row td {
   border-bottom: 1px solid var(--grey100);
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  color: var(--gray1000);
 }
 
 .table .table__row:hover {

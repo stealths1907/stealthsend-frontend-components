@@ -1,6 +1,28 @@
 <template>
   <div class="uikit-container">
     <h1>UI Kit</h1>
+    <h2>TOOLTIP</h2>
+    <div
+      style="display: flex; align-items: center; justify-content: space-between; width: 800px; margin: 0 auto;"
+    >
+      <StTooltip tooltip="Example label" position="bottom-right"
+        >bottom right</StTooltip
+      >
+      <StTooltip tooltip="Example label" position="right">right</StTooltip>
+      <StTooltip tooltip="Example label" position="top-right"
+        >top right</StTooltip
+      >
+      <StTooltip tooltip="Example label" position="bottom-left"
+        >bottom left</StTooltip
+      >
+      <StTooltip tooltip="Example label" position="left">left</StTooltip>
+      <StTooltip tooltip="Example label" position="top-left"
+        >top left</StTooltip
+      >
+      <StTooltip tooltip="Example label dsadasdasd" position="center"
+        >center</StTooltip
+      >
+    </div>
     <h2>TOGGLE</h2>
     <StSwitch v-model="isSwitch">Test</StSwitch>
     <StSwitch v-model="isSwitch" type="thunder"> Test</StSwitch>
@@ -272,20 +294,6 @@
       <StClipboard content="kopirani string" @click="handleCopy"></StClipboard>
     </StTooltip>
     <br />
-    <br />
-    <h2>Tooltip</h2>
-    <StTooltip position="left" tooltip-text="aaaaa">
-      <button>left</button>
-    </StTooltip>
-    <StTooltip tooltip-text="aaaaa">
-      <button>top</button>
-    </StTooltip>
-    <StTooltip position="bottom" tooltip-text="aaaaa">
-      <button>bottom</button>
-    </StTooltip>
-    <StTooltip position="right" tooltip-text="aaaaa">
-      <button>right</button>
-    </StTooltip>
     <br />
     <br />
     <h2>Global loading</h2>

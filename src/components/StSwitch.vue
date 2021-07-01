@@ -148,18 +148,23 @@ svg path {
   height: 24px;
   border: 1.5px solid var(--grey200);
   border-radius: 19px;
+  box-sizing: border-box;
 }
 .st-switch--simple .st-switch__bullet {
   width: 19px;
-  height: 19px;
+  height: 18px;
   border-radius: 18px;
   background-color: var(--grey100);
   position: absolute;
   left: 3px;
-  top: 3px;
+  top: 1px;
   transition: 0.3s;
 }
 .st-switch__label {
+  font-family: var(--secondary-font);
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.12px;
   margin-left: 24px;
 }
 </style>

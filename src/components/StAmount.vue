@@ -101,13 +101,13 @@ export default {
       formattedValue
     }
   },
-    computed: {
+  computed: {
     value: {
       get() {
-        return this.formattedValue;
+        return this.formattedValue
       },
       set(value) {
-        this.$emit("update:formattedValue", value);
+        this.$emit('update:formattedValue', value)
       }
     }
   }

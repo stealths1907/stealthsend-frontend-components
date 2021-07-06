@@ -21,8 +21,7 @@
           (formattedValue && Number(formattedValue.replace('$', '')) > 0) ||
           (formattedValue && Number(formattedValue.replace('XST', '')) > 0)
       }"
-      :value="formattedValue"
-      @input="inputChange($event.target.value)"
+      :value="value"
     />
     <div v-if="$slots.default" class="st-icon"><slot /></div>
   </fieldset>
@@ -93,19 +92,23 @@ export default {
     }
   },
   emits: ['update:formattedValue'],
-  setup(props, { emit }) {
+  setup(props) {
     let innerValue = ref('')
     const { formattedValue, inputRef } = useCurrencyInput(props.options)
-    function inputChange(value) {
-      innerValue.value = value
-      emit('update:formattedValue', value)
-    }
-
     return {
-      inputChange,
       innerValue,
       inputRef,
       formattedValue
+    }
+  },
+    computed: {
+    value: {
+      get() {
+        return this.formattedValue;
+      },
+      set(value) {
+        this.$emit("update:formattedValue", value);
+      }
     }
   }
 }

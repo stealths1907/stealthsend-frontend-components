@@ -18,7 +18,7 @@
       /></span>
     </label>
     <slot />
-    <p v-if="errorMessage" class="st-form-item__error">
+    <p v-if="errorMessage.length" class="st-form-item__error">
       {{ errorMessage[0] }}
     </p>
     <template v-else>

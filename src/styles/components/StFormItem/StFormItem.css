@@ -26,6 +26,7 @@
 }
 
 .st-form-item .description {
+    text-align: left;
     font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.12px;
@@ -38,11 +39,7 @@
 
 .st-form-item.st-form-item--center .st-input .st-input__inner,
 .st-form-item.st-form-item--center .description {
-    text-align: center;
-}
-
-#has-icon .st-input .st-input__inner {
-    padding-right: var(--right);
+    text-align: center !important;
 }
 
 /* FILLED */
@@ -132,11 +129,15 @@
 }
 
 .st-form-item--light.st-form-item__error .label-left,
-.st-form-item--light.st-form-item__error .label-right,
 .st-form-item--light.st-form-item__error .st-input .st-icon svg path,
 .st-form-item--light.st-form-item__error .st-input .st-icon svg circle {
     color: var(--red500);
     stroke: var(--red500);
+}
+
+.st-form-item--light.st-form-item__error,
+.st-form-item--light.st-form-item__error .label-right {
+    color: var(--red300);
 }
 
 

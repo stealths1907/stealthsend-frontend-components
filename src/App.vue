@@ -500,7 +500,7 @@
               label="Label error"
               color="dark"
               :filled="input"
-              :error-message="['Error text']"
+              :error-message="error"
             >
               <template #labelRight>Optional</template>
               <StInput v-model="input" placeholder="Field value">
@@ -906,6 +906,7 @@ export default {
     /* INPUT */
     const input = ref('')
     const amount = ref(0)
+    const error = ref('Haha')
 
     function changeTab(tab) {
       activeTab.value = tab
@@ -916,6 +917,7 @@ export default {
 
       input,
       amount,
+      error,
 
       changeTab
     }

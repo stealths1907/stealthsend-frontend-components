@@ -64,7 +64,7 @@
   display: block;
   color: var(--grey900);
   border-radius: 2px;
-  background: linear-gradient(153.02deg, rgba(250, 249, 252, 0.15) 0%, rgba(229, 228, 232, 0.15) 83.23%), var(grey50);
+  background: linear-gradient(153.02deg, rgba(250, 249, 252, 0.15) 0%, rgba(229, 228, 232, 0.15) 83.23%), var(--grey50);
   border: 1px solid rgba(229, 228, 232, 0.15);
   transition: 0.3s;
 }

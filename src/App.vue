@@ -409,6 +409,10 @@
                 <p>Description/help text</p>
               </template>
             </StFormItem>
+            <StFormItem label="Label md" :filled="amount" size="md">
+              <template #labelRight>Optional</template>
+              <StAmount v-model="amount" placeholder="Field value"></StAmount>
+            </StFormItem>
           </div>
           <div class="dark grid">
             <StFormItem label="Label sm" color="dark" :filled="input">
@@ -787,6 +791,15 @@
                 <p>Description/help text</p>
               </template>
             </StFormItem>
+            <StFormItem
+              label="Label md"
+              :filled="amount"
+              color="dark"
+              size="lg"
+            >
+              <template #labelRight>Optional</template>
+              <StAmount v-model="amount" placeholder="Field value"></StAmount>
+            </StFormItem>
           </div>
         </div>
       </template>
@@ -877,19 +890,22 @@
 <script>
 import StFormItem from '@/components/StFormItem.vue'
 import StInput from '@/components/StInput.vue'
+import StAmount from '@/components/StAmount.vue'
 import StButton from '@/components/StButton.vue'
 import { ref } from 'vue'
 export default {
   components: {
     StFormItem,
     StInput,
-    StButton
+    StButton,
+    StAmount
   },
   setup() {
     const activeTab = ref('input')
 
     /* INPUT */
     const input = ref('')
+    const amount = ref(0)
 
     function changeTab(tab) {
       activeTab.value = tab
@@ -899,6 +915,7 @@ export default {
       activeTab,
 
       input,
+      amount,
 
       changeTab
     }

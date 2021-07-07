@@ -8,7 +8,6 @@
       :placeholder="placeholder"
       autocomplete="off"
       class="st-input__inner"
-      :class="{ 'is-disabled': disabled }"
       :value="modelValue"
       @input="inputChange($event.target.value)"
     />

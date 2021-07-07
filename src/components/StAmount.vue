@@ -1,30 +1,17 @@
 <template>
-  <fieldset
-    class="st-amount"
-    :class="{
-      'has-error': hasError,
-      'st-amount--is-not-empty':
-        (formattedValue && formattedValue.replace('$', '') > 0) ||
-        (formattedValue && formattedValue.replace('XST', '') > 0)
-    }"
-  >
+  <div class="st-input">
     <input
       ref="inputRef"
       :type="type"
       :disabled="disabled"
-      autocomplete="off"
+      :readonly="readonly"
       :placeholder="placeholder"
-      class="st-amount__inner"
-      :class="{
-        'is-disabled': disabled,
-        'is-dirty':
-          (formattedValue && Number(formattedValue.replace('$', '')) > 0) ||
-          (formattedValue && Number(formattedValue.replace('XST', '')) > 0)
-      }"
+      autocomplete="off"
+      class="st-input__inner"
       :value="value"
     />
     <div v-if="$slots.default" class="st-icon"><slot /></div>
-  </fieldset>
+  </div>
 </template>
 
 <script>
@@ -41,10 +28,10 @@ export default {
       }
     },
     modelValue: {
-      type: String,
+      type: Number,
       required: false,
       default: () => {
-        return ''
+        return 0
       }
     },
     options: {
@@ -82,13 +69,6 @@ export default {
       default: () => {
         return ''
       }
-    },
-    hasError: {
-      type: Boolean,
-      required: false,
-      default: () => {
-        return false
-      }
     }
   },
   emits: ['update:formattedValue'],
@@ -115,5 +95,5 @@ export default {
 </script>
 
 <style>
-@import '../styles/components/StAmount/StAmount.css';
+@import '../styles/components/StInput/StInput.css';
 </style>

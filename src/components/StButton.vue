@@ -1,12 +1,6 @@
 <template>
   <button
-    class="st-button"
-    :class="{
-      'st-button--primary': color === 'primary',
-      'st-button--secondary': color === 'secondary',
-      'st-button--white': color === 'white',
-      disabled: disabled
-    }"
+    :class="[type, `button-${size}`]"
     :disabled="disabled"
     @click="(e) => $emit('click', e)"
   >
@@ -32,26 +26,36 @@ export default {
         return ''
       }
     },
-    color: {
+    type: {
       type: String,
-      required: false,
+      required: true,
       default: () => {
-        return 'primary'
+        return 'type-a'
       },
       validator: (value) => {
-        return ['primary', 'secondary', 'white'].includes(value)
+        return ['type-a', 'type-b', 'type-c', 'type-d'].includes(value)
+      }
+    },
+    size: {
+      type: String,
+      required: true,
+      default: () => {
+        return 'normal'
+      },
+      validator: (value) => {
+        return ['large', 'medium', 'normal', 'small', 'xsmall'].includes(value)
       }
     }
   },
   emits: ['click']
-  // setup(props, ctx) {
-  //   function handleClick() {
-  //     if (props.to.length > 0) ctx.emit("click");
-  //   }
-  //   return {
-  //     handleClick
-  //   };
-  // }
+  /* setup() {
+    function handleClick() {
+      if (props.to.length > 0) ctx.emit("click");
+    }
+    return {
+      handleClick
+    };
+  } */
 }
 </script>
 

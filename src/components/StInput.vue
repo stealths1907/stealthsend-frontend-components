@@ -1,25 +1,19 @@
 <template>
-  <fieldset
-    class="st-input"
-    :class="{
-      'has-error': hasError,
-      'st-input--is-not-empty': modelValue.length > 0,
-      'st-input--readonly': readonly
-    }"
-  >
+  <div class="st-input">
     <input
       ref="input"
       :type="type"
       :disabled="disabled"
+      :readonly="readonly"
       :placeholder="placeholder"
       autocomplete="off"
       class="st-input__inner"
-      :class="{ 'is-disabled': disabled, 'is-dirty': modelValue.length > 0 }"
+      :class="{ 'is-disabled': disabled }"
       :value="modelValue"
       @input="inputChange($event.target.value)"
     />
     <div v-if="$slots.default" class="st-icon"><slot /></div>
-  </fieldset>
+  </div>
 </template>
 
 <script>

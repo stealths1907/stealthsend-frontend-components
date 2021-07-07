@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .st-status {
   display: flex;
   align-items: center;

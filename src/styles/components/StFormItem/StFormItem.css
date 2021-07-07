@@ -1,0 +1,323 @@
+:root {
+    --right: 0;
+}
+
+.st-form-item {
+    margin-bottom: 24px;
+}
+
+.st-form-item .label {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--secondary-font);
+    transition: 0.3s;
+}
+
+.st-form-item .label .label-left {
+    font-weight: 700;
+}
+
+.st-form-item .st-form-item__error {
+    font-family: var(--secondary-font);
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+}
+
+.st-form-item .description {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+    font-family: var(--secondary-font);
+}
+
+.st-form-item.st-form-item--center .label {
+    justify-content: center;
+}
+
+.st-form-item.st-form-item--center .st-input .st-input__inner,
+.st-form-item.st-form-item--center .description {
+    text-align: center;
+}
+
+#has-icon .st-input .st-input__inner {
+    padding-right: var(--right);
+}
+
+/* FILLED */
+
+.st-form-item__filled .st-input:after {
+    width: 100% !important;
+}
+
+.st-form-item--light.st-form-item__filled .label {
+    color: var(--marine500);
+}
+
+/* LIGHT */
+
+
+.st-form-item--light .label {
+    color: var(--marine400);
+}
+
+.st-form-item--light .label .label-right {
+    color: var(--marine200);
+}
+
+.st-form-item--light .st-input .st-input__inner {
+    color: var(--grey900);
+    border-bottom: 1.5px solid var(--grey200);
+}
+
+.st-form-item--light .st-input .st-input__inner::placeholder {
+    color: var(--grey900);
+}
+
+.st-form-item--light .st-input .st-input__inner:focus::placeholder {
+    color: var(--grey100) !important;
+}
+
+.st-form-item--light .st-input .st-icon svg path, 
+.st-form-item--light .st-input .st-icon svg circle {
+    stroke: var(--marine400);
+}
+
+.st-form-item--light .st-input:focus-within .st-icon svg path, 
+.st-form-item--light .st-input:focus-within .st-icon svg circle {
+    stroke: var(--marine500);
+}
+
+.st-form-item--light .description {
+    color: var(--grey400);
+}
+
+/* LIGHT HOVER */
+
+.st-form-item--light:hover .label {
+    color: var(--marine600);
+}
+
+.st-form-item--light:hover .st-input .st-input__inner, 
+.st-form-item--light:hover .st-input .st-input__inner::placeholder {
+    color: var(--grey1000);
+}
+
+.st-form-item--light:hover .st-input .st-icon svg path, 
+.st-form-item--light:hover .st-input .st-icon svg circle {
+    stroke: var(--marine600);
+}
+
+.st-form-item--light:hover .st-input:after {
+    border-color: var(--marine600);
+}
+
+/* LIGHT FILLED */
+
+.st-form-item--light.st-form-item__filled .st-input .st-icon svg path, 
+.st-form-item--light.st-form-item__filled .st-input .st-icon svg circle {
+    stroke: var(--marine500);
+}
+
+.st-form-item--light.st-form-item__filled .st-input:after {
+    border-color: var(--marine500);
+}
+
+/* LIGHT ERROR */
+
+.st-form-item--light.st-form-item__error .st-input:after {
+    width: 100%;
+    border-color: var(--red500);
+}
+
+.st-form-item--light.st-form-item__error .label-left,
+.st-form-item--light.st-form-item__error .label-right,
+.st-form-item--light.st-form-item__error .st-input .st-icon svg path,
+.st-form-item--light.st-form-item__error .st-input .st-icon svg circle {
+    color: var(--red500);
+    stroke: var(--red500);
+}
+
+
+/* LIGHT DISABLED */
+
+.st-form-item--light.st-form-item__disabled .label-left,
+.st-form-item--light.st-form-item__disabled .label-right,
+.st-form-item--light.st-form-item__disabled .st-input .st-icon svg path,
+.st-form-item--light.st-form-item__disabled .st-input .st-icon svg circle,
+.st-form-item--light.st-form-item__disabled .st-input:after,
+.st-form-item--light.st-form-item__disabled .st-input .st-input__inner,
+.st-form-item--light.st-form-item__disabled .st-input .st-input__inner::placeholder,
+.st-form-item--light.st-form-item__disabled .description {
+    color: var(--grey400);
+    stroke: var(--grey400);
+    border-color: var(--grey200);
+}
+
+/* LIGHT READONLY */
+
+.st-form-item--light.st-form-item__readonly .st-input:after {
+    width: 100%;
+    border-color: var(--grey200);
+}
+
+.st-form-item--light.st-form-item__readonly .st-input .st-input__inner,
+.st-form-item--light.st-form-item__readonly .st-input .st-input__inner::placeholder{
+    color: var(--grey1000) !important;
+    border-color: var(--grey200);
+}
+
+/* DARK */
+
+.st-form-item--dark .label {
+    color: var(--grey100);
+}
+
+.st-form-item--dark:hover .label {
+    color: var(--grey50);
+}
+
+.st-form-item--dark .st-input .st-input__inner {
+    color: var(--grey100);
+}
+
+.st-form-item--dark .st-input .st-input__inner::placeholder {
+    color: var(--grey100);
+}
+
+.st-form-item--dark .st-input .st-input__inner {
+    border-bottom: 1.5px solid var(--grey400);
+}
+
+.st-form-item--dark .st-input .st-icon svg path, 
+.st-form-item--dark .st-input .st-icon svg circle {
+    stroke: var(--grey100);
+}
+
+.st-form-item--dark .description {
+    color: var(--grey400);
+}
+
+/* DARK HOVER */
+
+.st-form-item--dark:hover .st-input .st-input__inner, 
+.st-form-item--dark:hover .st-input .st-input__inner::placeholder {
+    color: var(--grey50);
+}
+
+.st-form-item--dark:hover .label {
+    color: var(--grey50);
+}
+
+.st-form-item--dark:hover .st-input .st-icon svg path, 
+.st-form-item--dark:hover .st-input .st-icon svg circle {
+    stroke: var(--grey50);
+}
+
+.st-form-item--dark:hover .st-input:after {
+    border-color: var(--marine500);
+}
+
+/* DARK FILLED */
+
+
+/* DARK ERROR */
+
+.st-form-item--dark.st-form-item__error .st-input:after {
+    width: 100%;
+    border-color: var(--red500);
+}
+
+.st-form-item--dark.st-form-item__error .label-left {
+    color: var(--red500);
+}
+
+.st-form-item--dark.st-form-item__error,
+.st-form-item--dark.st-form-item__error .label-right {
+    color: var(--red200);
+}
+
+/* DARK DISABLED */
+
+.st-form-item--dark.st-form-item__disabled .label-left,
+.st-form-item--dark.st-form-item__disabled .label-right,
+.st-form-item--dark.st-form-item__disabled .st-input .st-icon svg path,
+.st-form-item--dark.st-form-item__disabled .st-input .st-icon svg circle,
+.st-form-item--dark.st-form-item__disabled .st-input:after,
+.st-form-item--dark.st-form-item__disabled .st-input .st-input__inner,
+.st-form-item--dark.st-form-item__disabled .st-input .st-input__inner::placeholder,
+.st-form-item--dark.st-form-item__disabled .description {
+    color: var(--grey500);
+    stroke: var(--grey500);
+    border-color: var(--grey500);
+}
+
+/* DARK READONLY */
+
+.st-form-item--dark.st-form-item__readonly .st-input:after {
+    width: 100%;
+    border-color: var(--grey200);
+}
+
+.st-form-item--dark.st-form-item__readonly .st-input .st-input__inner,
+.st-form-item--dark.st-form-item__readonly .st-input .st-input__inner::placeholder {
+    color: var(--grey100) !important;
+    border-color: var(--grey200);
+}
+
+/* SIZE SM */
+
+.st-form-item--sm .label {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+}
+
+.st-form-item--sm .st-input .st-input__inner  {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+}
+
+/* SIZE MD */
+
+.st-form-item--md .label {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+}
+
+.st-form-item--md .st-input .st-input__inner  {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+}
+
+/* SIZE LG */
+
+.st-form-item--lg .label {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+}
+
+.st-form-item--lg .st-input .st-input__inner  {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.12px;
+}
+
+/* SIZE XL */
+
+.st-form-item--xl .label {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+}
+
+.st-form-item--xl .st-input .st-input__inner  {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.12px;
+}

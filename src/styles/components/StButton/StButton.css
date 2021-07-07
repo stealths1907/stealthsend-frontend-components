@@ -1,59 +1,120 @@
 @import '../../design-tokens/colors.css';
-.st-button {
-  padding: 9px 64px;
-  font-family: var(--primary-font);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12px;
-  line-height: 24px;
-  text-align: center;
-  min-width: 140px;
-  outline: none;
+
+/* BUTTONS DISABLED */
+
+.type-a:disabled, .type-c:disabled {
+  background: linear-gradient(153.43deg, rgba(184, 183, 187, 0.15) 0%, rgba(229, 228, 232, 0.15) 83.33%), var(--grey100) !important;
+  border: 1px solid rgba(207, 205, 209, 0.25) !important;
+  color: var(--grey300);
+}
+
+.type-b:disabled {
+  color: var(--marine50) !important;
+}
+
+.type-d:disabled {
+  color: var(--grey200);
+}
+
+/* BUTTONS TYPE */
+
+.type-a {
+  cursor: pointer;
+  display: block;
+  color: var(--grey50);
   border-radius: 2px;
+  background: linear-gradient(153.02deg, rgba(78, 0, 246, 0.15) 0%, rgba(63, 1, 198, 0.15) 83.23%), var(--marine500);
+  border: 1px solid rgba(63, 1, 198, 0.5);
+  transition: 0.3s;
 }
-.st-button--primary {
-  border: 1px solid var(--marine600);
-  background-color: var(--marine500);
-  background: linear-gradient(
-    153.43deg,
-    var(--marine500) 0%,
-    var(--marine600) 100%
-  );
-  color: var(--white);
+.type-a:hover {
+  background: linear-gradient(153.02deg, rgba(78, 0, 246, 0.15) 0%, rgba(63, 1, 198, 0.15) 83.23%), var(--marine400);
+  border: 1px solid rgba(78, 0, 246, 0.5);
 }
-.st-button--primary:hover {
-  background-color: var(--marine400);
+
+.type-b {
   cursor: pointer;
-}
-.st-button--secondary {
-  border: none;
-  background-color: transparent;
+  display: block;
   color: var(--marine500);
+  border-radius: 2px;
+  background: transparent;
+  border: none;
+  transition: 0.3s;
 }
-.st-button--secondary:hover {
-  cursor: pointer;
+.type-b:hover {
   color: var(--marine400);
 }
-.st-button--white {
-  font-family: var(--secondary-font);
-  border: none;
-  background: linear-gradient(153.02deg, rgba(250, 249, 252, 0.15) 0%, rgba(229, 228, 232, 0.15) 83.23%), #FAF9FC;
-border: 1px solid rgba(229, 228, 232, 0.15);
-box-sizing: border-box;
-border-radius: 2px;
-  color: var(--grey1000);
-  font-size: 12px;
-line-height: 24px;
-font-weight: 700;
-padding: 6px 64px;
-}
-.st-button--white:hover {
+
+.type-c {
   cursor: pointer;
+  display: block;
+  color: var(--grey50);
+  border-radius: 2px;
+  background: linear-gradient(153.02deg, rgba(124, 126, 175, 0.15) 0%, rgba(124, 126, 175, 0.15) 83.23%), var(--purple500);
+  border: 1px solid rgba(124, 126, 175, 0.5);
+  transition: 0.3s;
+}
+.type-c:hover {
+  background: linear-gradient(153.02deg, rgba(154, 156, 217, 0.15) 0%, rgba(171, 173, 223, 0.15) 83.23%), var(--purple400);
+  border: 1px solid rgba(124, 126, 175, 0.5);
+}
+
+.type-d {
+  cursor: pointer;
+  display: block;
   color: var(--grey900);
+  border-radius: 2px;
+  background: linear-gradient(153.02deg, rgba(250, 249, 252, 0.15) 0%, rgba(229, 228, 232, 0.15) 83.23%), var(grey50);
+  border: 1px solid rgba(229, 228, 232, 0.15);
+  transition: 0.3s;
 }
-.disabled {
-  opacity: 0.5;
+.type-d:hover {
+  color: var(--grey1000);
 }
-.disabled:hover {
-  cursor: not-allowed;
+
+/* BUTTONS SIZE */
+
+.button-large {
+  padding: 9px 64px;
+  font-family: var(--primary-font);
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.32px;
+  font-weight: 600;
+}
+
+.button-medium {
+  padding: 9px 64px;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  font-weight: 600;
+}
+
+.button-normal {
+  padding: 5px 64px;
+  font-family: var(--secondary-font);
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  font-weight: 700;
+}
+
+.button-small {
+  padding: 5px 12px;
+  font-family: var(--secondary-font);
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  font-weight: 700;
+}
+
+.button-xsmall {
+  padding: 5px 24px;
+  font-family: var(--secondary-font);
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.12px;
+  font-weight: 700;
 }

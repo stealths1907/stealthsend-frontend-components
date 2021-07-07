@@ -116,7 +116,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .st-pagination {
   display: flex;
   flex-direction: column;

@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="postcss">
+<style>
 .loading-page {
   width: 100vw;
   height: 100vh;

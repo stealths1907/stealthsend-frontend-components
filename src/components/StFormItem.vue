@@ -4,7 +4,7 @@
     :class="[
       color === 'default' ? 'st-form-item--light' : 'st-form-item--dark',
       checkSize,
-      { 'st-form-item__filled': filled.length || filled },
+      { 'st-form-item__filled': filled && filled.length || filled },
       { 'st-form-item__error': errorMessage.length },
       { 'st-form-item__disabled': disabled },
       { 'st-form-item__readonly': readonly },

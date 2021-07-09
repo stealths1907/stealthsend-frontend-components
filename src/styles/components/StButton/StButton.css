@@ -1,5 +1,9 @@
 @import '../../design-tokens/colors.css';
 
+button {
+  outline: none;
+}
+
 /* BUTTONS DISABLED */
 
 .type-a:disabled, .type-c:disabled {

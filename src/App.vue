@@ -882,6 +882,7 @@
       </template>
       <template v-if="activeTab === 'tooltip'">
         <h1>Tooltip</h1>
+        <StTooltip tooltip="tooltip">This tooltip - Horizontally centered</StTooltip>
       </template>
     </div>
   </div>
@@ -892,13 +893,15 @@ import StFormItem from '@/components/StFormItem.vue'
 import StInput from '@/components/StInput.vue'
 import StAmount from '@/components/StAmount.vue'
 import StButton from '@/components/StButton.vue'
+import StTooltip from '@/components/StTooltip.vue'
 import { ref } from 'vue'
 export default {
   components: {
     StFormItem,
     StInput,
     StButton,
-    StAmount
+    StAmount,
+    StTooltip
   },
   setup() {
     const activeTab = ref('input')

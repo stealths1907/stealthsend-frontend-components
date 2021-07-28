@@ -15,7 +15,7 @@ export default {
     },
     position: {
       type: String,
-      default: 'center'
+      default: 'top'
     }
   },
   setup(props) {
@@ -64,7 +64,7 @@ export default {
   white-space: nowrap;
   transition: 0.3s;
 }
-[tooltip]:after {
+/* [tooltip]:after {
   pointer-events: none;
   content: '';
   display: block;
@@ -77,9 +77,9 @@ export default {
   z-index: 2;
   opacity: 0;
   transition: 0.3s;
-}
+} */
 /* BOTTOM RIGHT */
-[tooltip][position^='bottom-right']:before {
+/* [tooltip][position^='bottom-right']:before {
   top: calc(100% + 5px);
   left: calc(50% - 13px);
   padding-left: 30px;
@@ -87,7 +87,7 @@ export default {
 [tooltip][position^='bottom-right']:after {
   top: calc(100% + 15px);
   left: 50%;
-}
+} */
 /* RIGHT */
 [tooltip][position^='right']:before {
   top: calc(50% - 12px);
@@ -100,7 +100,7 @@ export default {
   transform: rotate(-90deg);
 }
 /* TOP RIGHT */
-[tooltip][position^='top-right']:before {
+/* [tooltip][position^='top-right']:before {
   bottom: calc(100% + 5px);
   left: calc(50% - 13px);
   padding-left: 30px;
@@ -109,9 +109,9 @@ export default {
   bottom: calc(100% + 15px);
   left: 50%;
   transform: rotate(180deg);
-}
+} */
 /* BOTTOM LEFT */
-[tooltip][position^='bottom-left']:before {
+/* [tooltip][position^='bottom-left']:before {
   top: calc(100% + 5px);
   right: calc(50% - 13px);
   padding-right: 30px;
@@ -119,9 +119,9 @@ export default {
 [tooltip][position^='bottom-left']:after {
   top: calc(100% + 15px);
   right: 50%;
-}
+} */
 /* LEFT */
-[tooltip][position^='left']:before {
+/* [tooltip][position^='left']:before {
   top: calc(50% - 12px);
   right: calc(100% + 5px);
   padding-right: 30px;
@@ -130,9 +130,15 @@ export default {
   top: calc(50% - 2px);
   right: calc(100% + 17px);
   transform: rotate(90deg);
+} */
+/* TOP */
+[tooltip][position^='top']:before {
+  top: calc(0% - 30px);
+  right: 50%;
+  transform: translateX(50%);
 }
 /* TOP LEFT */
-[tooltip][position^='top-left']:before {
+/* [tooltip][position^='top-left']:before {
   bottom: calc(100% + 5px);
   right: calc(50% - 13px);
   padding-right: 30px;
@@ -141,13 +147,13 @@ export default {
   bottom: calc(100% + 15px);
   right: 50%;
   transform: rotate(180deg);
-}
+} */
 /* CENTER */
-[tooltip][position^='center']:before {
+/* [tooltip][position^='center']:before {
   top: calc(50% - 12px);
   left: calc(50% - var(--left));
 }
 [tooltip][position^='center']:after {
   display: none;
-}
+} */
 </style>

@@ -882,7 +882,7 @@
       </template>
       <template v-if="activeTab === 'tooltip'">
         <h1>Tooltip</h1>
-        <StTooltip tooltip="tooltip"
+        <StTooltip tooltip="tooltip" position="right"
           >This tooltip - Horizontally centered</StTooltip
         >
       </template>

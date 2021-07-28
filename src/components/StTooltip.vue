@@ -91,14 +91,14 @@ export default {
 /* RIGHT */
 [tooltip][position^='right']:before {
   top: calc(50% - 12px);
-  left: calc(100% + 5px);
-  padding-left: 30px;
+  left: calc(100% + 12px);
+  /* padding-left: 30px; */
 }
-[tooltip][position^='right']:after {
+/* [tooltip][position^='right']:after {
   top: calc(50% - 2px);
   left: calc(100% + 17px);
   transform: rotate(-90deg);
-}
+} */
 /* TOP RIGHT */
 /* [tooltip][position^='top-right']:before {
   bottom: calc(100% + 5px);

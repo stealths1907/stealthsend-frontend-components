@@ -1,5 +1,5 @@
 <template>
-  <span :id="position" class="tooltip" :tooltip="tooltip" :position="position"
+  <span :id="position" :class="[ tooltip ? 'tooltip' : '' ]" :tooltip="tooltip" :position="position"
     ><slot
   /></span>
 </template>

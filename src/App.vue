@@ -885,10 +885,8 @@
         <StTooltip tooltip="tooltip" position="right"
           >This tooltip - Horizontally centered</StTooltip
         >
-        <br>
-        <StTooltip tooltip=""
-          >This tooltip - Empty</StTooltip
-        >
+        <br />
+        <StTooltip tooltip="">This tooltip - Empty</StTooltip>
       </template>
     </div>
   </div>

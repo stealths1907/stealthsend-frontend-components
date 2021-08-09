@@ -10,6 +10,7 @@
       class="st-input__inner"
       :value="modelValue"
       @input="inputChange($event.target.value)"
+      @blur="onBlur($event.target.value)"
     />
     <div v-if="$slots.default" class="st-icon"><slot /></div>
   </div>
@@ -75,16 +76,21 @@ export default {
       default: 'missing-name'
     }
   },
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue', 'blur'],
   setup(props, { emit }) {
     let innerValue = ref('')
     function inputChange(value) {
       innerValue.value = value
       emit('update:modelValue', value)
     }
+    function onBlur(value) {
+      innerValue.value = value
+      emit('blur', value)
+    }
 
     return {
       inputChange,
+      onBlur,
       innerValue
     }
   }

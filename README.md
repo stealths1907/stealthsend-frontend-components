@@ -10,6 +10,7 @@ Main technologies:
 
 ### Prerequisites
 
+
 ```
 └─ $ ▶ node -v
 v12.18.2

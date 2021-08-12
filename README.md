@@ -39,7 +39,13 @@ Builds for desktop apps are still in research state and this is yet to be docume
 
 ### Deploying / Publishing
 
-Deploys for desktop apps are still in research state and this is yet to be documented.
+To deploy a new version of the kit, bump the patch tag and push (develop branch): 
+```
+git add .
+git commit -m "XST-123 implemented bla"
+npm version patch && git push && git push --tags
+```
+Changes will automatically be deployed on Nexus. Notifications are visible on the #npm-registry slack channel.
 
 ### Contributing
 

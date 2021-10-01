@@ -879,6 +879,7 @@
       </template>
       <template v-if="activeTab === 'toggle'">
         <h1>Toggle</h1>
+        <StSwitch theme="dark" type="thunder">Feeless</StSwitch>
       </template>
       <template v-if="activeTab === 'tooltip'">
         <h1>Tooltip</h1>
@@ -897,15 +898,17 @@ import StFormItem from '@/components/StFormItem.vue'
 import StInput from '@/components/StInput.vue'
 import StAmount from '@/components/StAmount.vue'
 import StButton from '@/components/StButton.vue'
+import StSwitch from '@/components/StSwitch.vue'
 import StTooltip from '@/components/StTooltip.vue'
 import { ref } from 'vue'
 export default {
   components: {
     StFormItem,
+    StSwitch,
     StInput,
     StButton,
     StAmount,
-    StTooltip
+    StTooltip,
   },
   setup() {
     const activeTab = ref('input')
@@ -926,9 +929,9 @@ export default {
       amount,
       error,
 
-      changeTab
+      changeTab,
     }
-  }
+  },
 }
 </script>
 

@@ -46,6 +46,7 @@ export default {
     },
     size: {
       type: String,
+      required: false,
       default: () => {
         return 'sm'
       },
@@ -54,7 +55,7 @@ export default {
       }
     },
     filled: {
-      type: String,
+      type: [String, Object],
       default: () => {
         return ''
       }

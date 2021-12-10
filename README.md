@@ -1,8 +1,7 @@
 # Stealth UI Kit
 
 Stealth desktop App for MacOs, Linux and Windows.
-- Jira board: https://jira.barrage.net/projects/XSTDESKTOP
-- Slack channel: https://wearebarrage.slack.com/archives/G01KQNE67PV
+- Stealth Junaeth Testnet Nodes @ Telegram: https://t.me/stealthsend
 
 Main technologies:
 - Vue (3.0.x)
@@ -45,12 +44,10 @@ git add .
 git commit -m "XST-123 implemented bla"
 npm version patch && git push && git push --tags
 ```
-Changes will automatically be deployed on Nexus. Notifications are visible on the #npm-registry slack channel.
 
 ### Contributing
 
 - use GitFlow because it is suitable for handling multiple versions of the same project
-- reference Jira task in the commit message (e.g. "XSTDESKTOP-123 implement login")
 - when something on kit is updated and everything is ready to push on repository use
 
 ```shell
@@ -59,6 +56,5 @@ npm version patch && git push && git push --tags
 
 ### Links
 
-- Jira board: https://jira.barrage.net/projects/XSTDESKTOP
-- Slack channel: https://wearebarrage.slack.com/archives/G01KQNE67PV
+- Stealth Junaeth Testnet Nodes @ Telegram: https://t.me/stealthsend
 - GitFlow: https://nvie.com/posts/a-successful-git-branching-model

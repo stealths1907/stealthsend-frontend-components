@@ -1,7 +1,7 @@
-# Stealth UI Kit
+# StealthSend Frontend Components
 
 Stealth desktop App for MacOs, Linux and Windows.
-- Stealth Junaeth Testnet Nodes @ Telegram: https://t.me/stealthsend
+- Stealth Official @ Telegram @ Telegram: https://t.me/stealthsend
 
 Main technologies:
 - Vue (3.0.x)
@@ -27,7 +27,7 @@ After cloning the repo from our git, do the following steps
 Example:
 
 ```shell
-cd stealth-kit
+cd stealthsend-frontend-components
 npm i
 npm run serve
 ```
@@ -56,5 +56,5 @@ npm version patch && git push && git push --tags
 
 ### Links
 
-- Stealth Junaeth Testnet Nodes @ Telegram: https://t.me/stealthsend
+- Stealth Official @ Telegram: https://t.me/stealthsend
 - GitFlow: https://nvie.com/posts/a-successful-git-branching-model

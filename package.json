@@ -1,10 +1,10 @@
 {
-  "name": "stealth-kit",
-  "version": "0.1.94",
+  "name": "stealthsend-frontend-components",
+  "version": "0.1.93",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://git.barrage.net/stealth/stealth-kit.git"
+    "url": "https://github.com/Stealth-R-D-LLC/stealthsend-frontend-components"
   },
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -31,7 +31,6 @@ cd stealthsend-frontend-components
 npm i
 npm run serve
 ```
-
 ### Building
 
 Builds for desktop apps are still in research state and this is yet to be documented.

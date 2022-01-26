@@ -7,6 +7,7 @@
       :readonly="readonly"
       :placeholder="placeholder"
       autocomplete="off"
+      spellcheck="false"
       class="st-input__inner"
       :value="modelValue"
       @input="inputChange($event.target.value)"

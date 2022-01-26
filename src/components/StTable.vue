@@ -124,9 +124,6 @@ export default {
   color: var(--gray1000);
 }
 
-.table .table__row:hover {
-  background-color: var(--background50);
-}
 .table .table__row:last-child {
   border-bottom: 1px solid var(--grey100);
 }

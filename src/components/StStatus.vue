@@ -14,8 +14,8 @@ export default {
   props: {
     type: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   setup(props) {
     const customClass = computed(() => {
@@ -23,12 +23,12 @@ export default {
         'st-status__dot--red': props.type === 'red',
         'st-status__dot--green': props.type === 'green',
         'st-status__dot--orange': props.type === 'orange',
-        'st-status__dot--empty': props.type === 'empty'
+        'st-status__dot--empty': props.type === 'empty',
       }
     })
 
     return { customClass }
-  }
+  },
 }
 </script>
 

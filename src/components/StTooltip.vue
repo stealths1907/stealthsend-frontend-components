@@ -15,26 +15,28 @@ export default {
     tooltip: {
       type: String,
       required: true,
-      default: ''
+      default: '',
     },
     position: {
       type: String,
-      default: 'top'
-    }
+      default: 'top',
+    },
   },
   setup(props) {
     onMounted(() => {
       if (props.position === 'center') {
         var element = document.getElementById('center')
-        var pseudoBeforeWidth = window.getComputedStyle(element, ':before')
-          .width
+        var pseudoBeforeWidth = window.getComputedStyle(
+          element,
+          ':before'
+        ).width
         var width = Number(pseudoBeforeWidth.split('px')[0]) + 40
         document.documentElement.style.setProperty('--left', `${width / 2}px`)
       }
     })
 
     return {}
-  }
+  },
 }
 </script>
 

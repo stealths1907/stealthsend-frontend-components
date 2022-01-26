@@ -27,55 +27,55 @@ export default {
       required: false,
       default: () => {
         return ''
-      }
+      },
     },
     modelValue: {
       type: String,
       required: false,
       default: () => {
         return ''
-      }
+      },
     },
     disabled: {
       type: Boolean,
       required: false,
       default: () => {
         return false
-      }
+      },
     },
     readonly: {
       type: Boolean,
       required: false,
       default: () => {
         return false
-      }
+      },
     },
     type: {
       type: String,
       required: false,
       default: () => {
         return 'text'
-      }
+      },
     },
     placeholder: {
       type: String,
       required: false,
       default: () => {
         return ''
-      }
+      },
     },
     hasError: {
       type: Boolean,
       required: false,
       default: () => {
         return false
-      }
+      },
     },
     name: {
       type: String,
       required: false,
-      default: 'missing-name'
-    }
+      default: 'missing-name',
+    },
   },
   emits: ['update:modelValue', 'blur'],
   setup(props, { emit }) {
@@ -92,9 +92,9 @@ export default {
     return {
       inputChange,
       onBlur,
-      innerValue
+      innerValue,
     }
-  }
+  },
 }
 </script>
 

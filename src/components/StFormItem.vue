@@ -8,7 +8,7 @@
       { 'st-form-item__error': errorMessage.length },
       { 'st-form-item__disabled': disabled },
       { 'st-form-item__readonly': readonly },
-      { 'st-form-item--center': position === 'center' }
+      { 'st-form-item--center': position === 'center' },
     ]"
   >
     <label class="label">
@@ -42,7 +42,7 @@ export default {
       },
       validator: (value) => {
         return ['default', 'dark'].includes(value)
-      }
+      },
     },
     size: {
       type: String,
@@ -52,27 +52,27 @@ export default {
       },
       validator: (value) => {
         return ['sm', 'md', 'lg', 'xl'].includes(value)
-      }
+      },
     },
     filled: {
       type: [String, Object, Number],
       default: () => {
         return ''
-      }
+      },
     },
     label: {
       type: String,
       required: false,
-      default: ''
+      default: '',
     },
     labelRight: {
       type: String,
       required: false,
-      default: ''
+      default: '',
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     readonly: {
       type: Boolean,
@@ -83,13 +83,13 @@ export default {
     },
     position: {
       type: String,
-      default: ''
+      default: '',
     },
     errorMessage: {
       type: [String, Array],
       required: false,
-      default: ''
-    }
+      default: '',
+    },
   },
   emits: ['rightLabelClick'],
   setup(props, ctx) {
@@ -111,9 +111,9 @@ export default {
     }
     return {
       checkSize,
-      handleActionLabelClick
+      handleActionLabelClick,
     }
-  }
+  },
 }
 </script>
 

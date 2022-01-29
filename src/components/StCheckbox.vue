@@ -22,13 +22,13 @@ export default {
   props: {
     modelValue: {
       type: [String, Boolean],
-      required: true
+      required: true,
     },
     label: {
       type: [String, Boolean],
       required: false,
-      default: false
-    }
+      default: false,
+    },
   },
   emits: ['update:modelValue'],
   setup(props, ctx) {
@@ -38,9 +38,9 @@ export default {
     }
 
     return {
-      handleInput
+      handleInput,
     }
-  }
+  },
 }
 </script>
 

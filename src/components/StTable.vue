@@ -21,7 +21,7 @@
             class="table__row"
             :class="{
               'table__row--is-cancelled':
-                item['status'] && item['status'] === 'cancelled'
+                item['status'] && item['status'] === 'cancelled',
             }"
             @click="handleRowClick(item)"
           >
@@ -53,23 +53,23 @@ export default {
     identifier: {
       type: String,
       required: false,
-      default: ''
+      default: '',
     },
     columns: {
       type: Array,
-      required: true
+      required: true,
     },
     data: {
       type: Array,
-      required: true
+      required: true,
     },
     hasHeader: {
       type: Boolean,
       required: false,
       default: () => {
         return true
-      }
-    }
+      },
+    },
   },
   emits: ['sortChanged', 'rowClick'],
   methods: {
@@ -78,8 +78,8 @@ export default {
     },
     handleRowClick(row) {
       this.$emit('rowClick', row)
-    }
-  }
+    },
+  },
 }
 </script>
 

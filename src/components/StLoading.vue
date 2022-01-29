@@ -16,20 +16,20 @@ export default {
     visibility: {
       type: Boolean,
       required: false,
-      default: false
+      default: false,
     },
     opaque: {
       type: Boolean,
       required: false,
-      default: false
-    }
+      default: false,
+    },
   },
   setup(props) {
     watchEffect(props.visibility, () => {
       // when global loading is active, it shouldn't be possible to scroll
       document.body.classList.toggle('noscroll', props.visibility)
     })
-  }
+  },
 }
 </script>
 

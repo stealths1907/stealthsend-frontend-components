@@ -55,7 +55,7 @@ export default {
       },
     },
     filled: {
-      type: [String, Object],
+      type: [String, Object, Number],
       default: () => {
         return ''
       },
@@ -76,7 +76,10 @@ export default {
     },
     readonly: {
       type: Boolean,
-      default: false,
+      required: false,
+      default: () => {
+        return false
+      },
     },
     position: {
       type: String,

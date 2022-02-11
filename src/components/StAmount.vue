@@ -4,7 +4,6 @@
       ref="inputRef"
       :type="type"
       :disabled="disabled"
-      :readonly="readonly"
       :placeholder="placeholder"
       autocomplete="off"
       class="st-input__inner"

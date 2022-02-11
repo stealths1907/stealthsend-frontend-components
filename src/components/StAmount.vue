@@ -24,14 +24,14 @@ export default {
       required: false,
       default: () => {
         return ''
-      },
+      }
     },
     modelValue: {
       type: Number,
       required: false,
       default: () => {
         return 0
-      },
+      }
     },
     options: {
       type: Object,
@@ -44,31 +44,31 @@ export default {
           valueAsInteger: false,
           useGrouping: true,
           precision: 2,
-          allowNegative: false,
+          allowNegative: false
         }
-      },
+      }
     },
     disabled: {
       type: Boolean,
       required: false,
       default: () => {
         return false
-      },
+      }
     },
     type: {
       type: String,
       required: false,
       default: () => {
         return 'text'
-      },
+      }
     },
     placeholder: {
       type: String,
       required: false,
       default: () => {
         return ''
-      },
-    },
+      }
+    }
   },
   emits: ['update:formattedValue'],
   setup(props) {
@@ -77,7 +77,7 @@ export default {
     return {
       innerValue,
       inputRef,
-      formattedValue,
+      formattedValue
     }
   },
   computed: {
@@ -87,9 +87,9 @@ export default {
       },
       set(value) {
         this.$emit('update:formattedValue', value)
-      },
-    },
-  },
+      }
+    }
+  }
 }
 </script>
 

@@ -908,7 +908,7 @@ export default {
     StInput,
     StButton,
     StAmount,
-    StTooltip,
+    StTooltip
   },
   setup() {
     const activeTab = ref('input')
@@ -929,9 +929,9 @@ export default {
       amount,
       error,
 
-      changeTab,
+      changeTab
     }
-  },
+  }
 }
 </script>
 

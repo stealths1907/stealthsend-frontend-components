@@ -30,28 +30,28 @@ export default {
   props: {
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     type: {
       type: String,
-      default: 'round',
+      default: 'round'
     },
     id: {
       type: String,
-      required: true,
+      required: true
     },
     modelValue: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      required: true,
+      required: true
     },
     value: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
@@ -62,9 +62,9 @@ export default {
 
     return {
       handleChange,
-      isChecked,
+      isChecked
     }
-  },
+  }
 }
 </script>
 

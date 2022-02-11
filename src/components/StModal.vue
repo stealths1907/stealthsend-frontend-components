@@ -6,7 +6,7 @@
           ref="stModalRef"
           class="st-modal-container"
           :class="[
-            light ? 'st-modal-container--light' : 'st-modal-container--dark',
+            light ? 'st-modal-container--light' : 'st-modal-container--dark'
           ]"
         >
           <div class="st-modal__header">
@@ -92,42 +92,42 @@ export default {
       required: false,
       default: () => {
         return false
-      },
+      }
     },
     steps: {
       type: Number,
       required: false,
       default: () => {
         return 0
-      },
+      }
     },
     currentStep: {
       type: Number,
       required: false,
       default: () => {
         return 0
-      },
+      }
     },
     visible: {
       type: Boolean,
       required: false,
-      default: false,
+      default: false
     },
     showCloseButton: {
       type: Boolean,
       required: false,
-      default: true,
+      default: true
     },
     hasClickOutside: {
       type: Boolean,
       required: false,
-      default: true,
+      default: true
     },
     light: {
       type: Boolean,
       required: false,
-      default: false,
-    },
+      default: false
+    }
   },
   emits: ['close', 'back', 'open'],
   setup(props, ctx) {
@@ -154,7 +154,7 @@ export default {
     }
 
     return { stModalRef, stepBack }
-  },
+  }
 }
 </script>
 

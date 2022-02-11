@@ -15,8 +15,8 @@ export default {
       required: false,
       default: () => {
         return null
-      },
-    },
+      }
+    }
   },
   emits: ['click'],
   setup(props, ctx) {
@@ -24,9 +24,9 @@ export default {
       ctx.emit('click')
     }
     return {
-      handleClick,
+      handleClick
     }
-  },
+  }
 }
 </script>
 

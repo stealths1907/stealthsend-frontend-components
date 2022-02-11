@@ -17,14 +17,14 @@ export default {
       required: false,
       default: () => {
         return false
-      },
+      }
     },
     to: {
       type: String,
       required: false,
       default: () => {
         return ''
-      },
+      }
     },
     type: {
       type: String,
@@ -34,7 +34,7 @@ export default {
       },
       validator: (value) => {
         return ['type-a', 'type-b', 'type-c', 'type-d'].includes(value)
-      },
+      }
     },
     size: {
       type: String,
@@ -44,10 +44,10 @@ export default {
       },
       validator: (value) => {
         return ['large', 'medium', 'normal', 'small', 'xsmall'].includes(value)
-      },
-    },
+      }
+    }
   },
-  emits: ['click'],
+  emits: ['click']
   /* setup() {
     function handleClick() {
       if (props.to.length > 0) ctx.emit("click");

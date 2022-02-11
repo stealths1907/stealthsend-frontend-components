@@ -11,8 +11,8 @@ export default {
   props: {
     content: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   emits: ['click'],
   setup(props, ctx) {
@@ -22,7 +22,7 @@ export default {
       ctx.emit('click')
     }
     return { copyToClipboard }
-  },
+  }
 }
 </script>
 

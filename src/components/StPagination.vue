@@ -41,25 +41,25 @@ export default {
   props: {
     total: {
       type: Number,
-      required: true,
+      required: true
     },
     pageSize: {
       type: Number,
       required: false,
       default: () => {
         return 10
-      },
+      }
     },
     currentPage: {
       type: Number,
       required: true,
-      default: 1,
+      default: 1
     },
     paginationLimit: {
       type: Number,
       required: false,
-      default: 5, // number of pages in pagination before 3 dots
-    },
+      default: 5 // number of pages in pagination before 3 dots
+    }
   },
   emits: ['view-all', 'size-change', 'current-change'],
   setup(props, ctx) {
@@ -110,9 +110,9 @@ export default {
       sizeChange,
       gotoPage,
       nextPage,
-      prevPage,
+      prevPage
     }
-  },
+  }
 }
 </script>
 

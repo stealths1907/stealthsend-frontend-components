@@ -27,8 +27,8 @@ export default {
   props: {
     items: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   setup() {
     let isVisible = ref(false)
@@ -42,7 +42,7 @@ export default {
       isVisible = false
     }
     return { isVisible, close, stDropdownRef }
-  }
+  },
 }
 </script>
 

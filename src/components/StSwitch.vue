@@ -35,12 +35,12 @@ export default {
   props: {
     modelValue: {
       type: [String, Boolean],
-      required: true
+      required: true,
     },
     label: {
       type: [String, Boolean],
       required: false,
-      default: false
+      default: false,
     },
     type: {
       type: String,
@@ -48,7 +48,7 @@ export default {
       default: 'simple',
       validator: (value) => {
         return ['simple', 'thunder'].includes(value)
-      }
+      },
     },
     theme: {
       type: String,
@@ -56,8 +56,8 @@ export default {
       default: 'light',
       validator: (value) => {
         return ['light', 'dark'].includes(value)
-      }
-    }
+      },
+    },
   },
   emits: ['update:modelValue'],
   setup(props, ctx) {
@@ -67,9 +67,9 @@ export default {
     }
 
     return {
-      handleInput
+      handleInput,
     }
-  }
+  },
 }
 </script>
 

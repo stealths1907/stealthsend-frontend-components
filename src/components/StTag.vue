@@ -3,7 +3,7 @@
     class="st-tag"
     :class="{
       'st-tag--is-success': color === 'success',
-      'st-tag--is-danger': color === 'danger'
+      'st-tag--is-danger': color === 'danger',
     }"
   >
     <slot />
@@ -22,12 +22,12 @@ export default {
       },
       validator: (value) => {
         return ['success', 'danger'].includes(value)
-      }
-    }
+      },
+    },
   },
   setup() {
     return {}
-  }
+  },
 }
 </script>
 
